@@ -9,9 +9,7 @@ const AlonePage = () => {
   return (
     <LayoutMain nav>
       <div className={styles.container}>
-        <h1 className={`${styles.title} text-light`}>
-          Are we alone?
-        </h1>
+        <h1 className={`${styles.title} text-light`}>Are we alone?</h1>
         <img src={alien1} height="200" />
         <Card className="m-4" style={{maxWidth: 800}}>
           <CardBody className="p-4">
