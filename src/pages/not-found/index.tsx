@@ -19,7 +19,7 @@ const NotFound = () => {
           You have boldy gone, where no other has gone before!
         </p>
         <p className="text-light mt-2">Click below, to teleport back</p>
-        <Link className="btn btn-secondary" to="/">
+        <Link className="btn btn-secondary" to="/home">
           Home
         </Link>
       </div>

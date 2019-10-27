@@ -107,7 +107,7 @@ const HomePage = () => {
                   toggle={togglePopup("ufo")}
                   title="Are we alone?!"
                   description="It is said that we have never made contact with alien life, but are we really alone?"
-                  link="/"
+                  link="/alone"
                 />
               </div>
             </LightSpeed>
@@ -127,7 +127,7 @@ const HomePage = () => {
                   toggle={togglePopup("astro")}
                   title="Space Explorers!"
                   description="Astronaughts are explorers of space! Thanks to them we have made many discoveries!"
-                  link={"/"}
+                  link={"/earth-orbit"}
                 />
               </div>
             </RubberBand>
@@ -158,7 +158,7 @@ const HomePage = () => {
               toggle={togglePopup("ship")}
               title="Space Travel!"
               description="These are our vessels that allow us to explore space"
-              link={"/"}
+              link={"/earth-orbit"}
             />
           </Parallax>
         </div>
@@ -177,7 +177,7 @@ const HomePage = () => {
               toggle={togglePopup("satellite")}
               title="Communication!"
               description="There are thousands of these orbiting our earth right now, what are they for?"
-              link={"/"}
+              link={"/earth-orbit"}
             />
           </Parallax>
           <Parallax x={[-400, 120]}>
@@ -192,7 +192,7 @@ const HomePage = () => {
               toggle={togglePopup("airplane")}
               title="Something!"
               description="Something"
-              link={"/"}
+              link={"/earth-orbit"}
             />
           </Parallax>
           <Parallax y={[500, -50]}>
@@ -233,7 +233,7 @@ const HomePage = () => {
               toggle={togglePopup("earth")}
               title="Something!"
               description="Something"
-              link={"/"}
+              link={"/earth"}
             />
             <img
               id="earth"
