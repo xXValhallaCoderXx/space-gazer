@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
@@ -13,7 +13,7 @@ const cssnano = require("cssnano");
     - Functions below are for helping with Development Process
 ********************/
 
-exports.devServer = ({ host, port } = {}) => ({
+exports.devServer = ({host, port} = {}) => ({
   // Handles the WDS for Development
   devServer: {
     stats: "errors-only",
@@ -28,7 +28,7 @@ exports.devServer = ({ host, port } = {}) => ({
   }
 });
 
-exports.generateSourceMaps = ({ type }) => ({
+exports.generateSourceMaps = ({type}) => ({
   // Handles the type of Source map to use
   devtool: type
 });
@@ -40,17 +40,17 @@ exports.generateSourceMaps = ({ type }) => ({
 
 exports.clean = path => ({
   // Clean the current build folder to ensure to old files are leftover
-  plugins: [new CleanWebpackPlugin([path], { allowExternal: true })]
+  plugins: [new CleanWebpackPlugin([path], {allowExternal: true})]
 });
 
 exports.minifyJavaScript = () => ({
   // Minify JS Code
   optimization: {
-    minimizer: [new TerserPlugin({ sourceMap: true })]
+    minimizer: [new TerserPlugin({sourceMap: true})]
   }
 });
 
-exports.minifyCSS = ({ options }) => ({
+exports.minifyCSS = ({options}) => ({
   // Minify CSS Code
   plugins: [
     new OptimizeCSSAssetsPlugin({
@@ -109,16 +109,17 @@ exports.loadJavaScript = ({include, exclude} = {}) => ({
       }
     ]
   },
-  plugins: [new ForkTsCheckerWebpackPlugin({
-    tslint: true,
-    workers: 1,
-    // watch: [include[0], include[1]]
-  })]
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      tslint: true,
+      workers: 1
+      // watch: [include[0], include[1]]
+    })
+  ]
 });
 
-
 // Image Loader
-exports.loadImages = ({ include, exclude, options } = {}) => ({
+exports.loadImages = ({include, exclude, options} = {}) => ({
   module: {
     rules: [
       {
@@ -141,13 +142,13 @@ exports.fontLoader = () => ({
         test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader"
           }
         ]
       }
     ]
   }
-})
+});
 
 // Load CSS for Development
 exports.developmentCSS = () => ({

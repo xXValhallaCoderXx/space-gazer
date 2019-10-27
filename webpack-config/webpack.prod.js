@@ -22,7 +22,8 @@ productionConfig = app =>
       output: {
         publicPath: "/", // Need this if you got Source maps on for Images to load
         filename: "[name].[chunkhash:8].js",
-        chunkFilename: "static/js/[name].[chunkhash:8].js"
+        chunkFilename: "static/js/[name].[chunkhash:8].js",
+        path: PATHS.build
       },
       optimization: {
         splitChunks: {
@@ -32,7 +33,7 @@ productionConfig = app =>
           name: "manifest"
         }
       },
-      recordsPath: path.join(__dirname, "../dist/records.json"),
+      recordsPath: path.join(__dirname, "../build/records.json"),
       // plugins: [
       //   new BundleAnalyzerPlugin()
       // ]
