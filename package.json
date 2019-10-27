@@ -10,7 +10,9 @@
     "dev": "webpack-dev-server --env.target development --config ./webpack-config/index.js",
     "build": "webpack --env.target production --config ./webpack-config/index.js",
     "build:stats": "webpack --env.target production --config ./webpack-config/index.js --json > stats.json",
-    "ts:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+    "ts:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

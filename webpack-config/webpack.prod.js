@@ -33,9 +33,9 @@ productionConfig = app =>
         }
       },
       recordsPath: path.join(__dirname, "../dist/records.json"),
-      plugins: [
-        new BundleAnalyzerPlugin()
-      ]
+      // plugins: [
+      //   new BundleAnalyzerPlugin()
+      // ]
     },
     parts.extractCSS(),
     parts.loadImages({
