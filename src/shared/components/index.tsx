@@ -3,7 +3,6 @@ export {default as NavBar} from "./top-nav";
 export {default as SideNav} from "./side-nav";
 export {default as Hero} from "./hero";
 export {default as ParticleComponent} from "./particles";
-export {default as Curtains} from "./curtain";
 export {default as HomeFeature} from "./home-feature";
 export {default as HomeFeatureRight} from "./home-feature-right";
 export {default as VerticalLine} from "./vertical-line";

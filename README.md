@@ -1,28 +1,4 @@
-# React JS + Webpack Build Config
-
-![alt text](https://brainhub.eu/static/media/reactjs-brainhub-development.9ea94b0d.png "React!")
-
-This is a basic React JS boilerplate, bootstrapped with a few other features to allow users to get up and going.
-
-It makes use of Babel, to allow us to use ES6/7/Whatever?!
-
-## Features
-
-- **Hot Module Reloading**: HMR Ready - Keep application state while making live changes to your code!
-- **SASS**: Get Sassilicious straight out of the box
-- **CSS Modules**: Start building with CSS Module straight out of the box!
-- **CSS Extraction**: Projects CSS code is extracted into a `.css` file
-- **Build Optimizations**: Tree shaking, minification, image optimizations etc
-- **Redux State Management**: Make state sane with Redux
-- **React Router**: React Router + Redux make using of Brower history for client side routing
-
-## Getting Started
-
-Getting started is simple! The directions below will get you up and running to get hacking in no time!
-
-### Prerequisites
-
-Ensure you to have the latest Node LTS ensured globally on your system, you can download it from [HERE](https://nodejs.org/en/).
+# Space Gazer
 
 ### Installing
 
@@ -32,7 +8,7 @@ Ensure you to have the latest Node LTS ensured globally on your system, you can 
 
 ## Development
 
-1. Run `npm start` or `yarn start` to start the development enviroment<br />
+1. Run `git push heroku master`
 2. Go to browser and visit: `localhost:8080`.
 
 This will start up a webpack dev server to allow for local development of your application.
