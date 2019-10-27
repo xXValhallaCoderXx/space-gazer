@@ -1,58 +1,151 @@
-.animated {
-  background-position: left top;
-  padding-top:95px;
-  margin-bottom:60px;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-@-webkit-keyframes lightSpeedIn {
-  0% {
-    -webkit-transform: translateX(100%) skewX(-30deg);
-    opacity: 0;
-  }
-  60% {
-     -webkit-transform: translateX(-20%) skewX(30deg);
-     opacity: 1;
-  }
-  80% {
-     -webkit-transform: translateX(0%) skewX(-15deg);
-     opacity: 1;
-  }
-  100% {
-     -webkit-transform: translateX(0%) skewX(0deg);
-     opacity: 1;
-  }
-}
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
 
-@keyframes lightSpeedIn {
-  0% {
-     transform: translateX(100%) skewX(-30deg);
-     opacity: 0;
-  }
-  60% {
-     transform: translateX(-20%) skewX(30deg);
-     opacity: 1;
-  }
-  80% {
-     transform: translateX(0%) skewX(-15deg);
-     opacity: 1;
-  }
-  100% {
-     transform: translateX(0%) skewX(0deg);
-     opacity: 1;
-  }
-}
+.bg_wrapper_1 {
+   height: 100vh;
+   background: rgb(0, 0, 0);
+   background: linear-gradient(
+     180deg,
+     rgba(0, 0, 0, 1) 0%,
+     rgba(0, 32, 62, 1) 66%,
+     rgba(0, 65, 125, 1) 100%
+   );
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
 
-.lightSpeedIn {
-  -webkit-animation-name: lightSpeedIn;
-  animation-name: lightSpeedIn;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-}
 
-.animated.lightSpeedIn {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-}
+/* MEDIA QUERIES */
+
+@include media-breakpoint-up(xs) {
+
+   .title {
+     font-size: 3.3rem;
+     margin-bottom: -20px;
+   }
+ 
+ }
+ 
+ @include media-breakpoint-up(sm) {
+ 
+ }
+ 
+ @include media-breakpoint-up(md) {
+ 
+ }
+ 
+ @include media-breakpoint-up(lg) {
+  
+ }
+ 
+ @include media-breakpoint-up(xl) {
+ 
+ }
+
+
+ @keyframes atom {
+   from { transform: none; }
+   to { transform: translateY(-10px); }
+ }
+ @keyframes electron-circle1 {
+   from { transform: rotateY(70deg) rotateZ(20deg); }
+   to { transform: rotateY(70deg) rotateZ(380deg); }
+ }
+ @keyframes electron1 {
+   from { transform: rotateZ(-20deg) rotateY(-70deg); }
+   to { transform: rotateZ(-380deg) rotateY(-70deg); }
+ }
+ @keyframes electron-circle2 {
+   from { transform: rotateY(60deg) rotateX(60deg) rotateZ(-30deg); }
+   to { transform: rotateY(60deg) rotateX(60deg) rotateZ(330deg); }
+ }
+ @keyframes electron2 {
+   from { transform: rotateZ(30deg) rotateX(-60deg) rotateY(-60deg); }
+   to { transform: rotateZ(-330deg) rotateX(-60deg) rotateY(-60deg); }
+ }
+ @keyframes electron-circle3 {
+   from { transform: rotateY(-60deg) rotateX(60deg) rotateZ(100deg); }
+   to { transform: rotateY(-60deg) rotateX(60deg) rotateZ(460deg); }
+ }
+ @keyframes electron3 {
+   from { transform: rotateZ(-100deg) rotateX(-60deg) rotateY(60deg); }
+   to { transform: rotateZ(-460deg) rotateX(-60deg) rotateY(60deg); }
+ }
+ 
+ 
+ .atom {
+   margin: 50px auto;
+   width: 120px;
+   height: 120px;
+   position: relative;
+   animation: atom 1s ease-in-out infinite alternate;
+   perspective: 300px;
+   transform-style: preserve-3d;
+ }
+ .atom:before {
+    content: '';
+    position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   width: 20px;
+   height: 20px;
+   border-radius: 10px;
+   background: white;
+ }
+ .atom .electron {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+    width: 100px;
+   height: 100px;
+   border-radius: 50px;
+   border: 2px solid white;;
+   transform-style: preserve-3d;
+ }
+ .atom .electron:before {
+    content: '';
+   position: absolute;
+   top: -4px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 8px;
+   height: 8px;
+   border-radius: 4px;
+   background:  white;
+   transform-origin: 50% 50% 0;
+ }
+ .atom .electron:nth-child(1) {
+   transform: rotateY(70deg) rotateZ(20deg);
+   animation: electron-circle1 3s linear infinite;
+ }
+ .atom .electron:nth-child(2) {
+   transform: rotateY(60deg) rotateX(60deg) rotateZ(-30deg);
+   animation: electron-circle2 3s linear infinite;
+ }
+ .atom .electron:nth-child(3) {
+   transform: rotateY(-60deg) rotateX(60deg) rotateZ(100deg);
+   animation: electron-circle3 3s linear infinite;
+ }
+ .atom .electron:nth-child(1):before {
+   transform: rotateZ(-20deg) rotateY(-70deg);
+   animation: electron1 3s linear infinite;
+ }
+ .atom .electron:nth-child(2):before {
+   transform: rotateZ(30deg) rotateX(-60deg) rotateY(-60deg);
+   animation: electron2 3s linear infinite;
+ }
+ .atom .electron:nth-child(3):before {
+   transform: rotateZ(-100deg) rotateX(-60deg) rotateY(60deg);
+   animation: electron3 3s linear infinite;
+ }
