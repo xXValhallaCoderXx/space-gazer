@@ -20,9 +20,9 @@ const IntroPage = (props: RouteComponentProps<any>) => {
         <Typing hideCursor={true} onFinishedTyping={onFinishedTyping}>
           <span>Loading cats into rocket...</span>
           <Typing.Reset count={1} delay={500} />
-          <span>Preparing launch sequence... </span>
+          <span>Preparing tasty snacks... </span>
           <Typing.Reset count={1} delay={500} />
-          <span>Go! </span>
+          <span>Launch! </span>
           <Typing.Reset count={1} delay={600} />
         </Typing>
       </div>

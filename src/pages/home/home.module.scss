@@ -30,6 +30,7 @@
 .space_ship_smoke_img,
 .ufoWrapper,
 .quote_2,
+.quote_3,
 .space_man_1 {
   position: relative;
 }
@@ -144,13 +145,25 @@
   }
 
   .quote_1 {
-    top:  0px;
+    top:  50px;
     padding: 10px;
   }
 
   .quote_2 {
     top: 100px;
-    padding: 10px;
+    padding: 30px;
+  }
+
+
+  .quote_3 {
+    padding: 30px;
+    top: 850px;
+  }
+
+  .quote_1_text,
+  .quote_2_text,
+  .quote_3_text {
+    font-size: 1.6rem;
   }
 
   .airplane_1 {
@@ -176,17 +189,17 @@
 
   .cloud_1_img {
     height: 60px;
-    top: 300px;
+    top: 550px;
     left: 200px;
   }
   .cloud_2_img {
     height: 80px;
-    top: 250px;
-    left: 50px;
+    top: 500px;
+    left: -50px;
   }
 
   .sun {
-    top: 400px;
+    top: 700px;
     transform: scale(0.5);
   }
 
@@ -271,6 +284,7 @@
 
   .airplane_1 {
     height: 200px;
+    top: 800px;
   }
 
   .space_satellite_1 {
@@ -301,7 +315,17 @@
     transform: scale(1);
   }
 
+  .quote_3 {
+    top: 950px;
+   padding-left: 200px;
+   padding-right: 200px;
+  }
 
+  .quote_1_text,
+  .quote_2_text,
+  .quote_3_text {
+    font-size: 3rem;
+  }
 
 
 }

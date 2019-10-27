@@ -145,7 +145,7 @@ const HomePage = () => {
           <Parallax y={[700, 150]}>
             <div className={`${styles.quote_1}`}>
               <RubberBand>
-                <h1 className="text-center">
+                <h1 className={`text-center ${styles.quote_1_text}`}>
                   Somewhere, something incredible,
                   <br /> is waiting to be known
                 </h1>
@@ -180,7 +180,7 @@ const HomePage = () => {
               link={"/earth-orbit"}
             />
           </Parallax>
-          <Parallax x={[-400, 30]}>
+          <Parallax x={[-300, 90]}>
             <img
               id="airplane"
               src={airplane1}
@@ -198,7 +198,7 @@ const HomePage = () => {
           <Parallax y={[500, -50]}>
             <div className={`${styles.quote_2}`}>
               <RubberBand fraction={1}>
-                <h1 style={{color: "white"}} className="text-center">
+                <h1 className={`text-center text-light ${styles.quote_2_text}`}>
                   Begin your quest for the greatests mysteries,
                   <br /> to start, you only need but look up to the skies.
                 </h1>
@@ -251,6 +251,17 @@ const HomePage = () => {
                 link={"/earth"}
               />
             </Pulse>
+          </Parallax>
+          <Parallax y={[0, 0]}>
+            <div className={`${styles.quote_3}`}>
+              <RubberBand fraction={1}>
+                <h1 className={`text-center text-light ${styles.quote_3_text}`}>
+                  We live on this speck called Earth, think about what you might
+                  do, today or tomorrow, and make the most of it.
+                </h1>
+                <p className="text-center">~Neil deGrasse Tyson</p>
+              </RubberBand>
+            </div>
           </Parallax>
           <Pulse duration={3500} forever>
             <Popup
