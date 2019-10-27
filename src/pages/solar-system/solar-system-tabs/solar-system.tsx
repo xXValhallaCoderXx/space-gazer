@@ -42,12 +42,12 @@ const SolarSystemTab = (props: any) => {
     <>
       <Container>
         <Row>
-          <Col sm="12">
+          <Col sm="12" className="mt-4  ">
             <Row>
-              <Col sm="12" md="2" lg="1" className="mt-3 p-0">
-                <h4>Topic</h4>
+              <Col sm="12" md="2" className="mt-3 p-0">
+                <h3>Topic</h3>
               </Col>
-              <Col sm="12" md="10" lg="10" className="p-0 m-0">
+              <Col sm="12" md="10" className="p-0 m-0">
                 <Select
                   onChange={onChange}
                   value={options.find(option => option.value === topic)}

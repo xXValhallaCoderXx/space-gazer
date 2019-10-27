@@ -55,13 +55,13 @@ const SolarSystemPage = (props: any) => {
           <Col md="4" />
           <Col>
             {/* <DidYouKnowCard /> */}
-            <h2 className={`text-center text-light mt-5 ${styles.caption}`}>
+            <h2 className={`text-center text-light ${styles.caption}`}>
               Some of the greatest disoveries, are just in our own backyard.
             </h2>
           </Col>
           <Col md="4" />
         </Row>
-        <Row style={{marginTop: 50, paddingBottom: 100}}>
+        <Row style={{paddingBottom: 100}}>
           <Col md="3" />
           <Col md="6">
             <Card>

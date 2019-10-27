@@ -9,7 +9,7 @@ const IntroPage = (props: RouteComponentProps<any>) => {
     props.history.push("/home");
   }
   return (
-    <Container className={styles.bg_wrapper_1}>
+    <Container fluid className={styles.bg_wrapper_1}>
       <h1 className={styles.title}>Space Gazer</h1>
       <div className={styles.atom}>
         <div className={styles.electron} />
