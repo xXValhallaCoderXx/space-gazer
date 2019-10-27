@@ -54,7 +54,7 @@ const SideNav = () => {
   return (
     <Menu styles={styles} right>
       <Link to="/home">
-        <h2 style={{color: "white"}}>Space Gazer</h2>
+        <h2 className="text-light">Space Gazer</h2>
       </Link>
       <div className="mt-3">
         <Nav vertical>
@@ -62,18 +62,40 @@ const SideNav = () => {
             <Link to="/about">About</Link>
           </NavItem>
 
-          <h3 style={{marginTop: 20}}>Categories</h3>
+          <h3 style={{marginTop: 20}}>Our Backyard</h3>
           <NavItem className={s.link}>
             <Link to="/solar-system">Solar System</Link>
           </NavItem>
           <NavItem className={s.link} style={{pointerEvents: "none"}}>
             <Link style={{color: "gray"}} to="/">
-              Space Equipment
+              Earth's Defenses
             </Link>
           </NavItem>
 
+          <h3 style={{marginTop: 20}}>The Universe</h3>
           <NavItem className={s.link}>
             <Link to="/alone">Are we alone?</Link>
+          </NavItem>
+          <NavItem className={s.link} style={{pointerEvents: "none"}}>
+            <Link style={{color: "gray"}} to="/">
+              Galaxies
+            </Link>
+          </NavItem>
+          <NavItem className={s.link} style={{pointerEvents: "none"}}>
+            <Link style={{color: "gray"}} to="/">
+              Black Holes
+            </Link>
+          </NavItem>
+          <h3 style={{marginTop: 20}}>Technology</h3>
+          <NavItem className={s.link} style={{pointerEvents: "none"}}>
+            <Link style={{color: "gray"}} to="/">
+              Space Travel
+            </Link>
+          </NavItem>
+          <NavItem className={s.link} style={{pointerEvents: "none"}}>
+            <Link style={{color: "gray"}} to="/">
+              Living In Space
+            </Link>
           </NavItem>
         </Nav>
       </div>
