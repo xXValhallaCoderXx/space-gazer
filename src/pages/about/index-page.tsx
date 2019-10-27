@@ -12,7 +12,7 @@ const HomePage = () => {
         </h1>
         <Card className="m-4" style={{maxWidth: 800}}>
           <CardBody className="p-4">
-            <p >
+            <p>
               I have always had a keen interest in space, though it wasnt over
               the recent few years my passion for it increasingly grew. The more
               I discovered about all its mysteries, and facts, the further it
