@@ -1,4 +1,3 @@
-// export {Landing} from "./landing";
 export {SolarSystem} from "./solar-system";
 export {About} from "./about";
 export {default as NotFound} from "./not-found";
