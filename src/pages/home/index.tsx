@@ -1,7 +1,7 @@
 import React from "react";
 import {TiArrowDownOutline} from "react-icons/ti";
 import {useSpring, animated} from "react-spring";
-import {LayoutMain, UfoMouseParallax, Popup, Sun} from "shared/components";
+import {LayoutMain, Popup, Sun} from "shared/components";
 import {Parallax} from "react-scroll-parallax";
 import RubberBand from "react-reveal/RubberBand";
 import LightSpeed from "react-reveal/LightSpeed";
@@ -163,7 +163,7 @@ const HomePage = () => {
           </Parallax>
         </div>
       </section>
-      <section className={styles.bg_wrapper_2}>
+      <section style={{marginTop: -1}} className={styles.bg_wrapper_2}>
         <div>
           <Parallax x={[50, -130]}>
             <img
@@ -180,7 +180,7 @@ const HomePage = () => {
               link={"/"}
             />
           </Parallax>
-          <Parallax x={[0, 120]}>
+          <Parallax x={[-400, 120]}>
             <img
               id="airplane"
               src={airplane1}
