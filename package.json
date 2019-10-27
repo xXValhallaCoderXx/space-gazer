@@ -11,8 +11,11 @@
     "build": "webpack --env.target production --config ./webpack-config/index.js",
     "build:stats": "webpack --env.target production --config ./webpack-config/index.js --json > stats.json",
     "ts:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "pm2:start": "pm2 start server.js",
+    "pm2:kill": "pm2 kill",
+    "start:local": "node server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -43,6 +46,7 @@
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "pm2": "^4.1.2",
     "postcss-loader": "^3.0.0",
     "postcss-safe-parser": "^4.0.1",
     "prettier": "^1.17.0",
@@ -68,6 +72,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.11",
     "react-device-detect": "^1.9.10",

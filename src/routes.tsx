@@ -4,7 +4,7 @@ import {ParallaxProvider} from "react-scroll-parallax";
 import {Route, Router, Switch} from "react-router-dom";
 import {createBrowserHistory} from "history";
 
-import {Home, SolarSystem, About, NotFound, Loading} from "./pages";
+import {Home, SolarSystem, About, NotFound, Loading, Alone} from "./pages";
 
 const history = createBrowserHistory();
 
@@ -16,6 +16,7 @@ const Routes = () => {
           <Route exact path="/" component={Loading} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/alone" component={Alone} />
           <Route exact path="/solar-system" component={SolarSystem} />
           <Route exact path="/solar-system/:tab" component={SolarSystem} />
           <Route

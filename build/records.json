@@ -353,5 +353,22 @@
       1,
       2
     ]
-  }
+  },
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--7-1!node_modules/sass-loader/lib/loader.js!node_modules/postcss-loader/src/index.js??ref--7-3!src/pages/alone/alone.module.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ]
 }

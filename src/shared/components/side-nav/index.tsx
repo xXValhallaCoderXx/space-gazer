@@ -72,10 +72,8 @@ const SideNav = () => {
             </Link>
           </NavItem>
 
-          <NavItem className={s.link} style={{pointerEvents: "none"}}>
-            <Link style={{color: "gray"}} to="/">
-              Are we alone?
-            </Link>
+          <NavItem className={s.link}>
+            <Link to="/alone">Are we alone?</Link>
           </NavItem>
         </Nav>
       </div>

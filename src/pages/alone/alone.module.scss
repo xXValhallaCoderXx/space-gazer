@@ -1,0 +1,143 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+.container {
+  height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,32,62,1) 66%, rgba(0,65,125,1) 100%);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+/* MEDIA QUERIES */
+
+@include media-breakpoint-up(xs) {
+
+  .title {
+    margin-top: 300px;
+    margin-bottom: 30px;
+    font-size: 3rem;
+  }
+
+}
+
+@include media-breakpoint-up(sm) {
+
+}
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+ 
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+
+/* UTILS */
+
+.glow {
+  transition: all 0.5s linear;
+}
+.glow:hover {
+  filter: drop-shadow(5px 5px 28px rgba(0, 231, 255, 0.8));
+  cursor: pointer;
+}
+
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-15%) rotate(-10deg);
+  }
+  30% {
+    transform: translateX(10%) rotate(10deg);
+  }
+  45% {
+    transform: translateX(-05%) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(0%) rotate(10deg);
+  }
+  75% {
+    transform: translateX(5%) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(1rem) rotate(-15deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg) scale(0.8);
+  }
+
+  50% {
+    transform: translateY(0) rotate(-15deg) scale(0.7);
+  }
+
+  75% {
+    transform: translateY(2rem) rotate(15deg) scale(0.8);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes hovering {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(1rem) rotate(-15deg);
+  }
+
+  75% {
+    transform: translateY(1rem) rotate(15deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
