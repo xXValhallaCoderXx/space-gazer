@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+.box {
+  border: 10px solid;
+  border-image-source: linear-gradient(
+    45deg,
+    rgb(58, 58, 58),
+    rgb(25, 93, 165)
+  );
+  border-image-slice: 1;
+}
+
+
+
+@include media-breakpoint-up(xs) {
+
+  .home_title_2 {
+    font-size: 1.5rem;
+  }
+
+
+}
+
+@include media-breakpoint-up(md) {
+
+
+}

@@ -1,0 +1,452 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+/* Fonts */
+
+/* IMAGES */
+
+.space_man_1 {
+  animation: wobble 10s infinite linear;
+}
+
+.astro {
+  animation: floating 10s infinite linear;
+}
+
+.space_satellite_1 {
+  animation: floating 10s infinite linear;
+}
+
+.astro,
+.quote_1,
+.sun,
+.airplane_1,
+.earth_img_1,
+.cloud_2_img,
+.cloud_1_img,
+.space_satellite_1,
+.space_ship_img,
+.space_ship_smoke_img,
+.ufoWrapper,
+.quote_2,
+.space_man_1 {
+  position: relative;
+}
+
+/* Wrappers */
+
+.bg_wrapper_1 {
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 32, 62, 1) 66%,
+    rgba(0, 65, 125, 1) 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.bg_wrapper_2 {
+  height: 100%;
+  background: rgb(0, 64, 124);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 64, 124, 1) 0%,
+    rgba(75, 134, 189, 1) 66%,
+    rgba(92, 162, 227, 1) 100%
+  );
+  color: white;
+  overflow: hidden;
+}
+
+/* UFO */
+.ufoBody,
+.ufoEye
+ {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.ufoBody {
+  background-image: url("../../shared/images/ufo-ship-1.png");
+  width: 300px;
+  height: 300px;
+}
+
+.ufoEye {
+  background-image: url("../../shared/images/ufo-ship-eye-1.png");
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@include media-breakpoint-up(xs) {
+  .titleWrapper {
+    margin-top: 100px;
+  }
+  .titleText {
+    font-size: 2.5rem;
+  }
+
+  .titleCaption {
+    font-size: 1.5rem;
+  }
+
+  .space_man_1 {
+    height: 150px;
+    left: 10%;
+    top: 20px;
+  }
+
+  .ufoBody {
+    height: 150px;
+    width: 150px;
+  }
+
+
+  .ufoWrapper {
+    left: 110px;
+    top: 50px;
+  } 
+
+  .ufoEye {
+    top: 280px;
+    left: 25px;
+    height: 15px;
+    width: 15px;
+  }
+
+  .astro {
+    left: 70%;
+    top: -50px;
+    height: 100px;
+  }
+
+  .space_ship_img {
+    height: 100px;
+  }
+
+  .space_ship_smoke_img {
+    height: 70px;
+    left: -60px;
+    top: 85px;
+  }
+
+  .quote_1 {
+    top: -200px;
+    padding: 10px;
+  }
+
+  .quote_2 {
+    top: 100px;
+    padding: 10px;
+  }
+
+  .airplane_1 {
+    height: 100px;
+    top: 300px;
+    left: -50px;
+  }
+
+  .space_satellite_1 {
+    margin-top: 100px;
+    height: 100px;
+    left: 100%;
+    top: -100px;
+  }
+
+  .earth_img_1 {
+    margin-top: 500px;
+    top: 400px;
+    height: 600px;
+    margin-left: -300px;
+    left: 50%;
+  }
+
+  .cloud_1_img {
+    height: 60px;
+    top: 300px;
+    left: 200px;
+  }
+  .cloud_2_img {
+    height: 80px;
+    top: 250px;
+    left: 50px;
+  }
+
+  .sun {
+    top: 400px;
+    transform: scale(0.5);
+  }
+
+
+
+}
+
+@include media-breakpoint-up(sm) {
+  .titleWrapper {
+    margin-top: 130px;
+  }
+  .titleText {
+    font-size: 3rem;
+  }
+  .titleCaption {
+    font-size: 2rem;
+  }
+  .space_man_1 {
+    height: 150px;
+    left: 90%;
+    top: 100px;
+  }
+
+  .cloud_1_img {
+    top: -400px;
+  }
+
+  .cloud_2_img {
+    top: -300px;
+    left: 200px;
+  }
+
+
+}
+
+@include media-breakpoint-up(md) {
+  .titleText {
+    font-size: 4rem;
+  }
+  .space_man_1 {
+    height: 200px;
+    left: 100%;
+    top: 100px;
+  }
+  .ufoWrapper {
+    left: 190px;
+    top: 50px;
+  }
+
+  .ufoBody {
+    height: 250px;
+    width: 250px;
+  }
+
+  .ufoEye {
+    top: 315px;
+    left: 60px;
+    height: 25px;
+    width: 25px;
+  }
+  .astro {
+    height: 200px;
+    top: -300px;
+    left: 100%
+  }
+
+  .quote_1 {
+    top: 0px;
+    padding: 10px;
+  }
+
+  .space_ship_img {
+    height: 180px;
+    left: -50px;
+  }
+
+  .space_ship_smoke_img {
+    height: 100px;
+    left: -150px;
+    top: 140px;
+  }
+
+  .airplane_1 {
+    height: 200px;
+  }
+
+  .space_satellite_1 {
+    height: 170px;
+  }
+  .earth_img_1 {
+    top: 550px;
+    height: 900px;
+    margin-left: -450px;
+    left: 50%;
+  }
+
+  .cloud_1_img {
+    height: 150px;
+    top: -200px;
+    left: 50px;
+  }
+
+  .cloud_2_img {
+    height: 120px;
+    left: 350px;
+    top: 50px;
+  }
+
+  .sun {
+    top: 450px;
+    left: 200px;
+    transform: scale(1);
+  }
+
+
+
+
+}
+
+@include media-breakpoint-up(lg) {
+  .titleText {
+    font-size: 6rem;
+  }
+  .space_man_1 {
+    left: 110%;
+  }
+
+  .ufoWrapper {
+    left: 350px;
+    top: 100px;
+  } 
+
+  .ufoEye {
+    top: 320px;
+    left: 70px;
+  }
+  .sun {
+    left: 430px;
+    top: 450px;
+  }
+
+  .cloud_1_img {
+    top: 100px;
+
+  }
+
+  .cloud_2_img {
+    left: 600px;
+    top: 140px;
+  }
+ 
+}
+
+@include media-breakpoint-up(xl) {
+  .sun {
+    left: 650px;
+    top: 700px;
+  }
+
+  .cloud_2_img {
+    left: 1500px;
+    top: 320px;
+  }
+}
+
+
+/* UTILS */
+
+.glow {
+  transition: all 0.5s linear;
+}
+.glow:hover {
+  filter: drop-shadow(5px 5px 28px rgba(0, 231, 255, 0.8));
+  cursor: pointer;
+}
+
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-15%) rotate(-10deg);
+  }
+  30% {
+    transform: translateX(10%) rotate(10deg);
+  }
+  45% {
+    transform: translateX(-05%) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(0%) rotate(10deg);
+  }
+  75% {
+    transform: translateX(5%) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(1rem) rotate(-15deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg) scale(0.8);
+  }
+
+  50% {
+    transform: translateY(0) rotate(-15deg) scale(0.7);
+  }
+
+  75% {
+    transform: translateY(2rem) rotate(15deg) scale(0.8);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes hovering {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(2rem) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(1rem) rotate(-15deg);
+  }
+
+  75% {
+    transform: translateY(1rem) rotate(15deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

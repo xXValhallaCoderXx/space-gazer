@@ -1,0 +1,45 @@
+.curtain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.curtainWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.curtainPanel {
+  background: black;
+  width: 50%;
+  height: 100vh;
+  float: left; /* Make panels side by side */
+  position: relative; /* Needed to use z-index */
+  z-index: 2;
+  transition: all 1s ease-out;
+}
+
+.curtainPanelLeft {
+  display: flex;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: all 2s ease;
+}
+
+.curtainPanelRight {
+  display: flex;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 2s ease;
+}
+
+.content {
+  position: absolute; /* Forces the prize position into the container start */
+  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+  width: 100%;
+  height: 100%;
+}
+
+.curtainOpen {
+  transform: translateX(0);
+}

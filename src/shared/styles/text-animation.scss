@@ -1,0 +1,25 @@
+.fadein {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+.slide-left {
+  animation: slideFromLeft 0.5s;
+}
+
+@keyframes slideFromLeft {
+  from {
+    margin-left: -500px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}

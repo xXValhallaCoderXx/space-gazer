@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "SpaceFont";
+  src: url("../fonts/trench100free.otf") format("opentype");
+}
+
+@import "./text-animation.scss";
+@import url("https://fonts.googleapis.com/css?family=Skranji&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SpaceFont";
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+$theme-colors: (
+  "black": black
+);
+
+.icons:hover {
+  color: gray !important;
+}
+
+$grid-breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1500px,
+  xxl: 1800px
+);
+
+
+$fontSizes: (
+  sm: 0.8rem,
+  md: 1rem,
+  lg: 3rem,
+  xl: 5rem,
+  xxl: 10rem
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (font-size: fs) {
+      @each $fs, $length in $fontSizes {
+        .#{$abbrev}#{$infix}-#{$fs} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}

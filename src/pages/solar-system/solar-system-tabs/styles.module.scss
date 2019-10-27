@@ -1,0 +1,9 @@
+.box {
+  border: 10px solid;
+  border-image-source: linear-gradient(
+    45deg,
+    rgb(58, 58, 58),
+    rgb(25, 93, 165)
+  );
+  border-image-slice: 1;
+}
