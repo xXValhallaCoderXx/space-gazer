@@ -180,7 +180,7 @@ const HomePage = () => {
               link={"/earth-orbit"}
             />
           </Parallax>
-          <Parallax x={[-400, 120]}>
+          <Parallax x={[-400, 30]}>
             <img
               id="airplane"
               src={airplane1}
@@ -207,22 +207,48 @@ const HomePage = () => {
           </Parallax>
           <Parallax y={[200, 50]}>
             <div className={`${styles.sun} ${styles.glow}`}>
-              <Sun />
+              <Sun id="sun" />
+              <Popup
+                target="sun"
+                isOpen={isPopupOpen === "sun"}
+                toggle={togglePopup("sun")}
+                title="Sun"
+                description="The giant of our Solar system, the sun is both worshiped, and feared, and rightfully so with its power to create and even destory life."
+                link={"/earth"}
+              />
             </div>
           </Parallax>
           <Parallax y={[250, 400]}>
             <Pulse duration={2500} forever>
               <img
+                id="cloud1"
                 className={`${styles.cloud_1_img} ${styles.glow}`}
                 src={cloud1}
+              />
+              <Popup
+                target="cloud1"
+                isOpen={isPopupOpen === "cloud1"}
+                toggle={togglePopup("cloud1")}
+                title="Clouds"
+                description="The clouds, they can ruin any of our sunny days, but they are vital for our eco system"
+                link={"/earth"}
               />
             </Pulse>
           </Parallax>
           <Parallax y={[50, 250]}>
             <Pulse duration={2500} forever>
               <img
+                id="cloud2"
                 className={`${styles.cloud_2_img} ${styles.glow}`}
                 src={cloud2}
+              />
+              <Popup
+                target="cloud2"
+                isOpen={isPopupOpen === "cloud2"}
+                toggle={togglePopup("cloud2")}
+                title="Clouds"
+                description="The clouds, they can ruin any of our sunny days, but they are vital for our eco system"
+                link={"/earth"}
               />
             </Pulse>
           </Parallax>
@@ -231,8 +257,8 @@ const HomePage = () => {
               target="earth"
               isOpen={isPopupOpen === "earth"}
               toggle={togglePopup("earth")}
-              title="Something!"
-              description="Something"
+              title="Earth"
+              description="Our home! How is it possible that there is so much life on earth? But the other planets in our solar system are desserted?"
               link={"/earth"}
             />
             <img
