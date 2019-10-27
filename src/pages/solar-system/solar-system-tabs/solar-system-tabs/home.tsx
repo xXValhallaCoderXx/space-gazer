@@ -8,7 +8,7 @@ const styles = require("./styles.module.scss");
 const SolarSystemTab = () => {
   return (
     <div>
-      <h2 className="mb-5">The Solar System</h2>
+      <h2 className={styles.home_title}>The Solar System</h2>
       <p>
         The solar system was formed approximately{" "}
         <span>4.6 billion years ago</span> by the collapse of a giant molecular
@@ -16,9 +16,9 @@ const SolarSystemTab = () => {
         of dust around it. This eventually formed the planets and other bodies
         of the solar system.
       </p>
-      <div className="mt-5 mb-5">
+      <div className={`mt-5 mb-5 ${styles.home_img_wrapper_1}`}>
         <h3 className={styles.home_txt_title}>This is our neighbourhood</h3>
-        <img src={solarEclipse1} style={{width: 300}} />
+        <img src={solarEclipse1} style={{width: "100%"}} />
         <h6 className={styles.home_txt_caption}>
           Get to know your neighbours!
         </h6>

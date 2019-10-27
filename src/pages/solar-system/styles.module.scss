@@ -84,6 +84,12 @@
     font-size: 1.2rem;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .home_card_body {
+    padding: 30px !important;
   }
 
 }
@@ -101,6 +107,14 @@
   .caption {
     font-size: 1.4rem;
     margin-top: -150px;
+  }
+
+  .home_card_wrapper {
+    margin-top: -80px;
+  }
+
+  .home_card_body {
+    padding: 40px !important;
   }
 
 }

@@ -1,5 +1,8 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
 .container {
-  height: 100vh;
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,32,62,1) 66%, rgba(0,65,125,1) 100%);
   display: flex;
@@ -8,4 +11,33 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+
+
+@include media-breakpoint-up(xs) {
+  .container {
+    height: 100%;
+  }
+  .about_title {
+    margin-top: 100px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .container {
+    height: 100vh;
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+ 
+}
+
+@include media-breakpoint-up(xl) {
+
 }

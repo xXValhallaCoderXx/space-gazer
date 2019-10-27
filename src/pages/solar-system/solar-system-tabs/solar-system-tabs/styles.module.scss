@@ -31,6 +31,10 @@
     margin-left: -15px;
   }
 
+  .home_title {
+    margin-bottom: 20px;
+  }
+
 }
 
 @include media-breakpoint-up(md) {
@@ -39,4 +43,16 @@
     top: 300px;
   }
 
+  .home_title {
+    margin-bottom: 0px;
+  }
+
+  .home_txt_title {
+    font-size: 1.8rem;
+  }
+  
+  .home_txt_caption {
+    margin-top: 10px;
+    font-size: 1.4rem;
+  }
 }
