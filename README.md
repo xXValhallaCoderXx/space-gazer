@@ -32,3 +32,19 @@ The build script will run several optimizations and preapre a single `.html` fil
 
 ### JS Tanspilation
 - Define browsers in `.babelrc` file
+
+
+
+
+## Mixins
+```
+@include breakpoint(sm) {
+    margin-top: 100px;
+  }
+@include breakpoint(480px) {
+   display: none;
+}
+ @include breakpoint($min: 640px, $max: 2000px) {
+      display: none;
+}
+```
