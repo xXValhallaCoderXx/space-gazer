@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
 @import "shared/styles/_mixins.scss";
 
-
+/* WRAPPERS START */
 .top_container_wrapper {
   height: 100vh;
   background-image: url("../../shared/images/bg/black-hole-bg.jpg");
@@ -16,25 +16,85 @@
 .bottom_container_wrapper {
   height: 100%;
   background-color: white;
+  @include breakpoint(xs) {
+    padding-top: 50px;
+  }
+  @include breakpoint(sm) {
+    padding-top: 100px;
+  }
 }
 
-.title_caption_wrapper {
+.title_wrapper {
   max-width: 1200px;
   align-self: center;
-  margin-top: 15%;
+  @include breakpoint(xs) {
+    margin-top: 60%;
+    padding: 35px;
+  }
+  @include breakpoint(sm) {
+    margin-top: 20%;
+  }
 }
 
-.about_title {
+.icon_wrapper_right {
+  display: flex;
+  align-items: center;
+  @include breakpoint(xs) {
+    justify-content: center;
+    margin-top: 50px
+  }
+  @include breakpoint(sm) {
+    justify-content: flex-end;
+    margin-top: 0px;
+  }
+}
+
+.icon_wrapper_left {
+  @include breakpoint(xs) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.intro_text_wrapper {
+  border: 10px solid #696969;
+  border-radius: 5px;
+  padding: 25px;
+  @include breakpoint(xs) {
+    margin-top: 100px
+  }
+  @include breakpoint(sm) {
+    margin-top: 0px;
+    font-size: 1.3rem;
+  }
+}
+
+/* WRAPPERS END */
+
+/* FONTS START */
+
+
+.title {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  @include breakpoint(xs) {
+    font-size: 1.5rem;
+  }
   @include breakpoint(sm) {
-    margin-top: 100px;
+    font-size: 2.5rem;
   }
 }
 
 .bottom_caption_txt {
   font-family: 'Raleway', sans-serif;
-  font-size: 2rem;
+  @include breakpoint(xs) {
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    text-align: left;
+  }
 }
 
 .explore_text {
@@ -46,6 +106,97 @@
   bottom: 10px;
   width: 75px;
 }
+
+
+.icon_text_right_title {
+  font-weight: 800;
+  @include breakpoint(xs) {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    font-size: 2.2rem;
+    text-align: right;
+  }
+}
+
+.icon_text_right {
+  @include breakpoint(xs) {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+}
+
+.icon_text_left_title {
+  font-weight: 800;
+  @include breakpoint(xs) {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 50px;
+  }
+  @include breakpoint(sm) {
+    margin-top: 0px;
+    font-size: 2.2rem;
+  }
+}
+
+.icon_text_left {
+  @include breakpoint(xs) {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
+
+.footer_text {
+  text-align: center;
+  @include breakpoint(xs) {
+    font-size: 1.5rem;
+  }
+}
+
+.caption_text_2_top {
+  font-weight: 800;
+
+  @include breakpoint(xs) {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.caption_text_2_bottom {
+
+  @include breakpoint(xs) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.caption_text_2_author {
+  @include breakpoint(xs) {
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    text-align: left;
+  }
+}
+
 
 .scroll_downs {
   position: absolute;
@@ -87,8 +238,3 @@
 
 /* Borders */
 
-.text_border {
-  border: 10px solid #696969;
-  border-radius: 5px;
-  padding: 25px;
-}
