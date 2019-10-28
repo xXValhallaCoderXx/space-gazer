@@ -1,43 +1,94 @@
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_variables.scss";
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "shared/styles/_mixins.scss";
 
-.container {
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,32,62,1) 66%, rgba(0,65,125,1) 100%);
+
+.top_container_wrapper {
+  height: 100vh;
+  background-image: url("../../shared/images/bg/black-hole-bg.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
-  position: relative;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
+.bottom_container_wrapper {
+  height: 100%;
+  background-color: white;
+}
 
+.title_caption_wrapper {
+  max-width: 1200px;
+  align-self: center;
+  margin-top: 15%;
+}
 
-@include media-breakpoint-up(xs) {
-  .container {
-    height: 100%;
-  }
-  .about_title {
+.about_title {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  @include breakpoint(sm) {
     margin-top: 100px;
   }
 }
 
-@include media-breakpoint-up(sm) {
-  .container {
-    height: 100vh;
-  }
+.bottom_caption_txt {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
 }
 
-@include media-breakpoint-up(md) {
-
+.explore_text {
+  position: absolute;
+  color: white;
+  margin: auto;
+  left: 0;
+  right: 0; 
+  bottom: 10px;
+  width: 75px;
 }
 
-@include media-breakpoint-up(lg) {
- 
+.scroll_downs {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.scroll_downs:hover {
+  cursor: pointer;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
 
-@include media-breakpoint-up(xl) {
+/* Borders */
 
+.text_border {
+  border: 10px solid #696969;
+  border-radius: 5px;
+  padding: 25px;
 }
