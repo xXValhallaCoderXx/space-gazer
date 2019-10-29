@@ -1,143 +1,125 @@
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_variables.scss";
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "shared/styles/_mixins.scss";
 
-.container {
+/* WRAPPERS START */
+.top_container_wrapper {
   height: 100vh;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,32,62,1) 66%, rgba(0,65,125,1) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../shared/images/bg/where-aliens-bg.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
-  position: relative;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
-
-/* MEDIA QUERIES */
-
-@include media-breakpoint-up(xs) {
-
-  .title {
-    margin-top: 300px;
-    margin-bottom: 30px;
-    font-size: 3rem;
+.bottom_container_wrapper {
+  height: 100%;
+  background-color: white;
+  @include breakpoint(xs) {
+    padding-top: 50px;
   }
-
+  @include breakpoint(sm) {
+    padding-top: 100px;
+  }
 }
 
-@include media-breakpoint-up(sm) {
+.title_wrapper {
+  max-width: 1200px;
+  align-self: center;
 
+  @include breakpoint(xs) {
+    margin-top: 60%;
+    padding: 35px;
+  }
+  @include breakpoint(sm) {
+    margin-top: 25%;
+  }
 }
 
-@include media-breakpoint-up(md) {
+/* WRAPPERS END */
 
+/* FONTS START */
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  @include breakpoint(xs) {
+    font-size: 2.3rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 4rem;
+  }
 }
 
-@include media-breakpoint-up(lg) {
- 
+.intro_text {
+  @include breakpoint(sm) {
+    font-size: 1.5rem;
+  }
 }
 
-@include media-breakpoint-up(xl) {
-
+.explore_text {
+  position: absolute;
+  color: white;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  width: 75px;
 }
 
-
-/* UTILS */
-
-.glow {
-  transition: all 0.5s linear;
+.footer_text {
+  text-align: center;
+  @include breakpoint(xs) {
+    font-size: 1.5rem;
+  }
 }
-.glow:hover {
-  filter: drop-shadow(5px 5px 28px rgba(0, 231, 255, 0.8));
+
+.scroll_downs {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  margin: auto;
+
+  width: 34px;
+  height: 55px;
+}
+.scroll_downs:hover {
   cursor: pointer;
 }
-
-
-@keyframes wobble {
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
   0% {
-    transform: translateX(0%);
+    opacity: 0;
   }
-  15% {
-    transform: translateX(-15%) rotate(-10deg);
-  }
-  30% {
-    transform: translateX(10%) rotate(10deg);
-  }
-  45% {
-    transform: translateX(-05%) rotate(-10deg);
-  }
-  60% {
-    transform: translateX(0%) rotate(10deg);
-  }
-  75% {
-    transform: translateX(5%) rotate(-10deg);
+  10% {
+    transform: translateY(0);
+    opacity: 1;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(15px);
+    opacity: 0;
   }
 }
 
-
-@keyframes floating {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  25% {
-    transform: translateY(2rem) rotate(15deg);
-  }
-
-  50% {
-    transform: translateY(1rem) rotate(-15deg);
-  }
-
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-
-  25% {
-    transform: translateY(2rem) rotate(15deg) scale(0.8);
-  }
-
-  50% {
-    transform: translateY(0) rotate(-15deg) scale(0.7);
-  }
-
-  75% {
-    transform: translateY(2rem) rotate(15deg) scale(0.8);
-  }
-
-  100% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-}
-
-@keyframes hovering {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  25% {
-    transform: translateY(2rem) rotate(15deg);
-  }
-
-  50% {
-    transform: translateY(1rem) rotate(-15deg);
-  }
-
-  75% {
-    transform: translateY(1rem) rotate(15deg);
-  }
-
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-}
+/* Borders */
