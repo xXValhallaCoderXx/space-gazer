@@ -40,9 +40,11 @@ const HomePage = () => {
             <Col sm="9">
               <div>
                 <p className={styles.intro_text}>
-                  As we go about our daily lives, its very easy to forget the
-                  beauty of the universe that we live in, from its sheer size,
-                  to the wonders of how it came to be.
+                  Day by day in the morder hectic daily lifestyle, its very easy
+                  to forget the
+                  <strong> beauty of the universe</strong> that we live in this
+                  very moment, from trying to comprehend its sheer size, to the
+                  wonders of how it came to be.
                 </p>
                 <p className={styles.intro_text}>
                   The size of the Earth may seem vast to us, but in reality, it
@@ -53,10 +55,11 @@ const HomePage = () => {
                 </p>
                 <p className={styles.intro_text}>
                   When you gaze up into the starry night sky, we have every
-                  reason to be struck with awe, and overwhelming feelings of
-                  curiosity. Since the universe is so vast, and the number of
-                  galaxies, starts planets in it, surely there must be other
-                  sentient life our there, But....Why havent we heard from them?
+                  reason to be <strong>struck with awe</strong>, and
+                  overwhelming feelings of curiosity. Since the universe is so
+                  vast, and the number of galaxies, starts planets in it, surely
+                  there must be other sentient life our there, But....Why havent
+                  we heard from them?
                 </p>
               </div>
             </Col>
