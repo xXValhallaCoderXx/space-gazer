@@ -18,13 +18,14 @@ const Routes = () => {
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/alone" component={Alone} />
-          <Route exact path="/solar-system" component={SolarSystem} />
-          <Route exact path="/solar-system/:tab" component={SolarSystem} />
+          <Route exact path="/solar-system/main" component={SolarSystem} />
+          <Route exact path="/solar-system/main/:tab" component={SolarSystem} />
+          {/* <Route exact path="/solar-system/:tab" component={SolarSystem} />
           <Route
             exact
             path="/solar-system/:tab/:item"
             component={SolarSystem}
-          />
+          /> */}
           <Route component={NotFound} />
         </Switch>
       </Router>
