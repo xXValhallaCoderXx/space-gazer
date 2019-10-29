@@ -38,6 +38,40 @@
   }
 }
 
+.fermi_bg_wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../../shared/images/bg/kuz-bg-1.jpg");
+  @include breakpoint(xs) {
+    height: 500px;
+  }
+  @include breakpoint(sm) {
+    height: 800px;
+  }
+}
+
+.fermi_bg_wrapper_2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  background-size: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../../shared/images/bg/kuz-bg-2.jpg");
+  @include breakpoint(xs) {
+    height: 500px;
+  }
+  @include breakpoint(sm) {
+    height: 800px;
+  }
+}
+
+
 /* WRAPPERS END */
 
 /* FONTS START */
@@ -55,11 +89,12 @@
 }
 
 .intro_text {
+  font-family: "Open Sans", sans-serif;
   @include breakpoint(xs) {
     padding: 15px;
   }
   @include breakpoint(sm) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -81,6 +116,8 @@
 }
 
 .fermi_title {
+  position: relative;
+  top: 150px;
   @include breakpoint(xs) {
    font-size: 3.5rem;
   }
@@ -89,15 +126,36 @@
    }
 }
 
+.sub_header {
+  @include breakpoint(xs) {
+    font-size: 3.5rem;
+   }
+   @include breakpoint(sm) {
+     font-size: 6.5rem;
+    }
+}
+
 .sub_title {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   @include breakpoint(xs) {
     font-size: 1.8rem;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
    }
    @include breakpoint(sm) {
-    font-size: 1.7rem;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
    }
+}
+
+.basic_font {
+  font-family: "Open Sans", sans-serif;
+  
 }
 
 /* IMAGES */
