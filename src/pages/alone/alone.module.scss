@@ -45,8 +45,9 @@
 .title {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  font-weight: 800;
   @include breakpoint(xs) {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   @include breakpoint(sm) {
     font-size: 4rem;
@@ -54,6 +55,9 @@
 }
 
 .intro_text {
+  @include breakpoint(xs) {
+    padding: 15px;
+  }
   @include breakpoint(sm) {
     font-size: 1.5rem;
   }
@@ -75,6 +79,45 @@
     font-size: 1.5rem;
   }
 }
+
+.fermi_title {
+  @include breakpoint(xs) {
+   font-size: 3.5rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 6.5rem;
+   }
+}
+
+.sub_title {
+  @include breakpoint(xs) {
+    font-size: 1.8rem;
+   }
+}
+
+/* IMAGES */
+
+.alien_1 {
+
+  @include breakpoint(xs) {
+    max-height: 220px;
+  }
+  @include breakpoint(sm) {
+    margin-left: 100px;
+    max-height: 350px;
+  }
+}
+
+.icon_image {
+  max-height: 180px;
+  @include breakpoint(xs) {
+    margin-bottom: 20px;
+  }
+  @include breakpoint(sm) {
+    margin-bottom: 0px;
+  }
+}
+
 
 .scroll_downs {
   position: absolute;
