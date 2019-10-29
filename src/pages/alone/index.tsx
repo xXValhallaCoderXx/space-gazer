@@ -95,7 +95,7 @@ const HomePage = () => {
                 <h2 className={styles.sub_title}>
                   It takes time and space (alot of it)
                 </h2>
-                <p>
+                <p className={styles.intro_text}>
                   One common explanation for the Fermi paradox is that it simply
                   takes lots of time for any decipherable signals to travel
                   across the cosmos. It also takes time (billions upon billions
@@ -123,7 +123,7 @@ const HomePage = () => {
                 <h2 className={styles.sub_title}>
                   Technical Difficulties: We Can’t Read Their Signals
                 </h2>
-                <p>
+                <p className={styles.intro_text}>
                   One common explanation for the Fermi paradox is that it simply
                   takes lots of time for any decipherable signals to travel
                   across the cosmos. It also takes time (billions upon billions
@@ -141,7 +141,7 @@ const HomePage = () => {
                 <h2 className={styles.sub_title}>
                   The Transcension Hypothesis: They Are Already Here
                 </h2>
-                <p style={{maxWidth: "90%"}}>
+                <p style={{maxWidth: "90%"}} className={styles.intro_text}>
                   One common explanation for the Fermi paradox is that it simply
                   takes lots of time for any decipherable signals to travel
                   across the cosmos. It also takes time (billions upon billions
@@ -169,7 +169,7 @@ const HomePage = () => {
                 <h2 className={styles.sub_title}>
                   The Zoo and Planetarium Hypotheses
                 </h2>
-                <p>
+                <p className={styles.intro_text}>
                   One common explanation for the Fermi paradox is that it simply
                   takes lots of time for any decipherable signals to travel
                   across the cosmos. It also takes time (billions upon billions
@@ -201,7 +201,7 @@ const HomePage = () => {
             </Col>
 
             <Col sm="9" md="12" className="p-5">
-              <p>
+              <p className={styles.intro_text}>
                 One common explanation for the Fermi paradox is that it simply
                 takes lots of time for any decipherable signals to travel across
                 the cosmos. It also takes time (billions upon billions of years
