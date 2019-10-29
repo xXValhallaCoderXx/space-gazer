@@ -4,5 +4,7 @@ declare module "react-reveal/RubberBand";
 declare module "react-reveal/Jump";
 declare module "react-reveal/LightSpeed";
 declare module "react-reveal/Flash";
+declare module "react-reveal/Bounce";
+declare module "react-reveal/Fade";
 declare module "react-typing-animation";
 declare module "mixpanel-browser";
