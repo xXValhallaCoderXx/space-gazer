@@ -1,6 +1,8 @@
 import React from "react";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
 import Flash from "react-reveal/Flash";
+import Fade from "react-reveal/Fade";
+import Bounce from "react-reveal/Bounce";
 import {LayoutMain, Hero} from "shared/components";
 const styles = require("./alone.module.scss");
 
@@ -16,9 +18,11 @@ const HomePage = () => {
     <LayoutMain nav>
       <div className={styles.top_container_wrapper}>
         <div className={styles.title_wrapper}>
-          <h1 className={`text-light ${styles.title}`}>
-            Where are all the aliens?
-          </h1>
+          <Bounce>
+            <h1 className={`text-light ${styles.title}`}>
+              Where are all the aliens?
+            </h1>
+          </Bounce>
           <div className={styles.scroll_downs}>
             <div className={styles.mousey}>
               <div className={styles.scroller} />
@@ -90,98 +94,110 @@ const HomePage = () => {
             </Col>
           </Row>
           <Row>
-            <Row>
-              <Col sm="9" className="order-2 order-sm-1 p-5">
-                <h2 className={styles.sub_title}>
-                  It takes time and space (alot of it)
-                </h2>
-                <p className={styles.intro_text}>
-                  One common explanation for the Fermi paradox is that it simply
-                  takes lots of time for any decipherable signals to travel
-                  across the cosmos. It also takes time (billions upon billions
-                  of years at best) for any species to become advanced enough
-                  for interstellar communication, intergalactic space travel,
-                  and possible colonization. Their signals may not have reached
-                  ours, and ours may not have reached them. Given the size of
-                  the universe and the pace of evolution, we may simply need a
-                  special kind of patience—the kind that transcends generations.
-                </p>
-              </Col>
-              <Col
-                sm="3"
-                className="d-flex justify-content-center align-items-center order-1 order-sm-2">
-                <img src={clock} className={styles.icon_image} />
-              </Col>
-            </Row>
-            <Row className="mt-5">
-              <Col
-                sm="3"
-                className="d-flex justify-content-center align-items-center pt-5">
-                <img src={questionMark} className={styles.icon_image} />
-              </Col>
-              <Col sm="9" className="p-5">
-                <h2 className={styles.sub_title}>
-                  Technical Difficulties: We Can’t Read Their Signals
-                </h2>
-                <p className={styles.intro_text}>
-                  One common explanation for the Fermi paradox is that it simply
-                  takes lots of time for any decipherable signals to travel
-                  across the cosmos. It also takes time (billions upon billions
-                  of years at best) for any species to become advanced enough
-                  for interstellar communication, intergalactic space travel,
-                  and possible colonization. Their signals may not have reached
-                  ours, and ours may not have reached them. Given the size of
-                  the universe and the pace of evolution, we may simply need a
-                  special kind of patience—the kind that transcends generations.
-                </p>
-              </Col>
-            </Row>
-            <Row className="p-5">
-              <Col sm="9" className="mt-5 order-2 order-sm-1">
-                <h2 className={styles.sub_title}>
-                  The Transcension Hypothesis: They Are Already Here
-                </h2>
-                <p style={{maxWidth: "90%"}} className={styles.intro_text}>
-                  One common explanation for the Fermi paradox is that it simply
-                  takes lots of time for any decipherable signals to travel
-                  across the cosmos. It also takes time (billions upon billions
-                  of years at best) for any species to become advanced enough
-                  for interstellar communication, intergalactic space travel,
-                  and possible colonization. Their signals may not have reached
-                  ours, and ours may not have reached them. Given the size of
-                  the universe and the pace of evolution, we may simply need a
-                  special kind of patience—the kind that transcends generations.
-                </p>
-              </Col>
-              <Col
-                sm="3"
-                className="d-flex justify-content-center align-items-center pt-5 order-1 order-sm-2">
-                <img src={alienSpy} style={{maxHeight: 180}} />
-              </Col>
-            </Row>
-            <Row className="mt-5 mb-5">
-              <Col
-                className="d-flex justify-content-center align-items-center pt-5"
-                sm="3">
-                <img src={earthShield} style={{maxHeight: 180}} />
-              </Col>
-              <Col sm="9" className="p-5">
-                <h2 className={styles.sub_title}>
-                  The Zoo and Planetarium Hypotheses
-                </h2>
-                <p className={styles.intro_text}>
-                  One common explanation for the Fermi paradox is that it simply
-                  takes lots of time for any decipherable signals to travel
-                  across the cosmos. It also takes time (billions upon billions
-                  of years at best) for any species to become advanced enough
-                  for interstellar communication, intergalactic space travel,
-                  and possible colonization. Their signals may not have reached
-                  ours, and ours may not have reached them. Given the size of
-                  the universe and the pace of evolution, we may simply need a
-                  special kind of patience—the kind that transcends generations.
-                </p>
-              </Col>
-            </Row>
+            <Fade fraction={0.8}>
+              <Row>
+                <Col sm="9" className="order-2 order-sm-1 p-5">
+                  <h2 className={styles.sub_title}>
+                    It takes time and space (alot of it)
+                  </h2>
+                  <p className={styles.intro_text}>
+                    One common explanation for the Fermi paradox is that it
+                    simply takes lots of time for any decipherable signals to
+                    travel across the cosmos. It also takes time (billions upon
+                    billions of years at best) for any species to become
+                    advanced enough for interstellar communication,
+                    intergalactic space travel, and possible colonization. Their
+                    signals may not have reached ours, and ours may not have
+                    reached them. Given the size of the universe and the pace of
+                    evolution, we may simply need a special kind of patience—the
+                    kind that transcends generations.
+                  </p>
+                </Col>
+                <Col
+                  sm="3"
+                  className="d-flex justify-content-center align-items-center order-1 order-sm-2">
+                  <img src={clock} className={styles.icon_image} />
+                </Col>
+              </Row>
+            </Fade>
+            <Fade fraction={0.8}>
+              <Row className="mt-5">
+                <Col
+                  sm="3"
+                  className="d-flex justify-content-center align-items-center pt-5">
+                  <img src={questionMark} className={styles.icon_image} />
+                </Col>
+                <Col sm="9" className="p-5">
+                  <h2 className={styles.sub_title}>
+                    Technical Difficulties: We Can’t Read Their Signals
+                  </h2>
+                  <p className={styles.intro_text}>
+                    One common explanation for the Fermi paradox is that it
+                    simply takes lots of time for any decipherable signals to
+                    travel across the cosmos. It also takes time (billions upon
+                    billions of years at best) for any species to become
+                    advanced enough for interstellar communication,
+                    intergalactic space travel, and possible colonization. Their
+                    signals may not have reached ours, and ours may not have
+                    reached them. Given the size of the universe and the pace of
+                    evolution, we may simply need a special kind of patience—the
+                    kind that transcends generations.
+                  </p>
+                </Col>
+              </Row>
+            </Fade>
+            <Fade fraction={0.8}>
+              <Row className="p-5">
+                <Col sm="9" className="mt-5 order-2 order-sm-1">
+                  <h2 className={styles.sub_title}>
+                    The Transcension Hypothesis: They Are Already Here
+                  </h2>
+                  <p style={{maxWidth: "90%"}} className={styles.intro_text}>
+                    One common explanation for the Fermi paradox is that it
+                    simply takes lots of time for any decipherable signals to
+                    travel across the cosmos. It also takes time (billions upon
+                    billions of years at best) for any species to become
+                    advanced enough for interstellar communication,
+                    intergalactic space travel, and possible colonization. Their
+                    signals may not have reached ours, and ours may not have
+                    reached them. Given the size of the universe and the pace of
+                    evolution, we may simply need a special kind of patience—the
+                    kind that transcends generations.
+                  </p>
+                </Col>
+                <Col
+                  sm="3"
+                  className="d-flex justify-content-center align-items-center pt-5 order-1 order-sm-2">
+                  <img src={alienSpy} style={{maxHeight: 180}} />
+                </Col>
+              </Row>
+            </Fade>
+            <Fade fraction={0.8}>
+              <Row className="mt-5 mb-5">
+                <Col
+                  className="d-flex justify-content-center align-items-center pt-5"
+                  sm="3">
+                  <img src={earthShield} style={{maxHeight: 180}} />
+                </Col>
+                <Col sm="9" className="p-5">
+                  <h2 className={styles.sub_title}>
+                    The Zoo and Planetarium Hypotheses
+                  </h2>
+                  <p className={styles.intro_text}>
+                    One common explanation for the Fermi paradox is that it
+                    simply takes lots of time for any decipherable signals to
+                    travel across the cosmos. It also takes time (billions upon
+                    billions of years at best) for any species to become
+                    advanced enough for interstellar communication,
+                    intergalactic space travel, and possible colonization. Their
+                    signals may not have reached ours, and ours may not have
+                    reached them. Given the size of the universe and the pace of
+                    evolution, we may simply need a special kind of patience—the
+                    kind that transcends generations.
+                  </p>
+                </Col>
+              </Row>
+            </Fade>
           </Row>
         </Container>
         <Container className="pb-5">
