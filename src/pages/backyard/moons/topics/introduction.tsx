@@ -14,21 +14,33 @@ const SolarSystemIntro = () => {
           <p className={`${styles.main_text} mt-3`}>mOONSNSSNN</p>
         </Col>
       </Row>
-      <Row>
-        <Col sm="12" md="8" className="order-2 order-sm-1">
-          <p className={styles.main_text}>
-            The solar system was formed approximately{" "}
-            <strong>4.6 billion years ago</strong> by the collapse of a giant
-            molecular cloud. The mass at its centre collected to{" "}
-            <strong>form the Sun</strong> and a flat disk of dust around it.
-            This eventually with numerous events, formed the planets and other
-            bodies of the solar system.
-          </p>
-        </Col>
-        <Col sm="12" md="4" className="order-1 order-sm-2">
-          <img src={universe1} className={styles.image_1} />
-        </Col>
-      </Row>
+      <p>
+        There are more than 194 moons of the various planets, dwarf planets in
+        the solar system. The planets Mercury and Venus do not have any moons
+        and neither does the dwarf planet Ceres. Find out the number of moons
+        each planet has and their names below.
+      </p>
+      <p className="mt-5">
+        Planets in our solar system can be divided into two main groups,
+        <strong>Terrestrial Planets</strong> and <strong>Gas Giants</strong>.
+        Planets that orbit other stars are referred to as{" "}
+        <strong>Exoplanets</strong>.
+      </p>
+      <h2 className={`mt-5 ${styles.home_title_2}`}>
+        Different Groups of Moons
+      </h2>
+      <p className="font-weight-bold">Teresstial Planet Moons</p>
+      <ul>
+        <li className="ml-n2">Earth, Mars</li>
+      </ul>
+      <p className="font-weight-bold">Gas Giant Moons</p>
+      <ul>
+        <li className="ml-n2">Jupiter, Saturn, Uranus, Neptune</li>
+      </ul>
+      <p className="font-weight-bold">Dwarf Planet Moons</p>
+      <ul>
+        <li className="ml-n2">Pluto, Haumea, Makemake, Eris</li>
+      </ul>
     </Container>
   );
 };
