@@ -64,7 +64,13 @@ const SideNav = () => {
 
           <h3 style={{marginTop: 20}}>Our Backyard</h3>
           <NavItem className={s.link}>
-            <Link to="/solar-system">Solar System</Link>
+            <Link to="/solar-system/main">Solar System</Link>
+          </NavItem>
+          <NavItem className={s.link}>
+            <Link to="/solar-system/planets">Planets</Link>
+          </NavItem>
+          <NavItem className={s.link}>
+            <Link to="/solar-system/moons">Moons</Link>
           </NavItem>
           <NavItem className={s.link} style={{pointerEvents: "none"}}>
             <Link style={{color: "gray"}} to="/">

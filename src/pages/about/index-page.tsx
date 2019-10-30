@@ -1,5 +1,6 @@
 import React from "react";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
+import Bounce from "react-reveal/Bounce";
 import Flash from "react-reveal/Flash";
 import {LayoutMain, Hero} from "shared/components";
 const styles = require("./styles.module.scss");
@@ -14,11 +15,13 @@ const HomePage = () => {
     <LayoutMain nav>
       <div className={styles.top_container_wrapper}>
         <div className={styles.title_wrapper}>
-          <h1 className={`text-light ${styles.title}`}>
-            Not enough people in this world, I think, carry a cosmic perspective
-            with them. It could be life-changing.
-          </h1>
-          <h4 className="text-light text-center">-Neil deGrasse Tyson</h4>
+          <Bounce>
+            <h1 className={`text-light ${styles.title}`}>
+              Not enough people in this world, I think, carry a cosmic
+              perspective with them. It could be life-changing.
+            </h1>
+            <h4 className="text-light text-center">-Neil deGrasse Tyson</h4>
+          </Bounce>
           <div className={styles.scroll_downs}>
             <div className={styles.mousey}>
               <div className={styles.scroller} />
@@ -46,7 +49,7 @@ const HomePage = () => {
             </Col>
             <Col sm="12" md="6">
               <div className={styles.intro_text_wrapper}>
-                <p className={styles.intro_text}>
+                <p className={styles.main_text}>
                   I have always had a keen interest in space, though it wasnt
                   over the recent few years my passion for it increasingly grew.
                   <br />

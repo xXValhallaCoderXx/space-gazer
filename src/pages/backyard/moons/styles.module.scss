@@ -7,7 +7,7 @@
 .top_container_wrapper {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../shared/images/bg/where-aliens-bg.jpg");
+    url("../../../shared/images/bg/where-aliens-bg.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -45,7 +45,7 @@
   align-items: center;
   margin-top: 150px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../../shared/images/bg/kuz-bg-1.jpg");
+  url("../../../shared/images/bg/kuz-bg-1.jpg");
   @include breakpoint(xs) {
     height: 500px;
   }
@@ -62,7 +62,7 @@
   margin-top: 150px;
   background-size: contain;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../../shared/images/bg/kuz-bg-2.jpg");
+  url("../../../shared/images/bg/kuz-bg-2.jpg");
   @include breakpoint(xs) {
     height: 500px;
   }

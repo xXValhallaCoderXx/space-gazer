@@ -1,1 +1,1 @@
-export {default as About} from "./index-container";
+export {default as About} from "./index-page";
