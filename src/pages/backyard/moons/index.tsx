@@ -46,9 +46,11 @@ const MoonsHome = (props: RouteComponentProps<any>) => {
       <div className={styles.top_container_wrapper}>
         <div className={styles.title_wrapper}>
           <Bounce>
-            <h1 className={`text-light ${styles.title}`}>The Moons</h1>
-            <p className={styles.title_caption}>BLah</p>
-            <p className="text-center text-light">~Paulo Coelho</p>
+            <h1 className={`text-light ${styles.title}`}>Moons</h1>
+            <p className={styles.title_caption}>
+              Aim for the moon, if you miss, you may hit a star
+            </p>
+            <p className="text-center text-light">~W. Clement Stone</p>
           </Bounce>
           <Link
             activeClass="active"

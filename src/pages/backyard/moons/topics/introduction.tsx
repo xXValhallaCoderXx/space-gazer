@@ -11,7 +11,11 @@ const SolarSystemIntro = () => {
       <Row>
         <Col sm="12">
           <h1 className={`${styles.title} mt-5`}>Introduction</h1>
-          <p className={`${styles.main_text} mt-3`}>mOONSNSSNN</p>
+          <p className={`${styles.main_text} mt-3`}>
+            We get to see this wonder, each night, but do you ever take a
+            moment, to stop, and realize to stare up, and realize all the
+            amazing energy surrounding us?
+          </p>
         </Col>
       </Row>
       <p>
