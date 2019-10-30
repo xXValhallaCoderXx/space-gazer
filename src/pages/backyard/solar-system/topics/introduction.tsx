@@ -12,12 +12,11 @@ const SolarSystemIntro = () => {
         <Col sm="12">
           <h1 className={`${styles.title} mt-5`}>Introduction</h1>
           <p className={`${styles.main_text} mt-3`}>
-          Ahh, the solar system, our backyard!
-        </p>
+            Ahh, the solar system, our backyard!
+          </p>
         </Col>
       </Row>
       <Row>
-      
         <Col sm="12" md="8" className="order-2 order-sm-1">
           <p className={styles.main_text}>
             The solar system was formed approximately{" "}
