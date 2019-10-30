@@ -1,5 +1,6 @@
 import React from "react";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
+import {Link} from "react-scroll";
 import Bounce from "react-reveal/Bounce";
 import Flash from "react-reveal/Flash";
 import {LayoutMain, Hero} from "shared/components";
@@ -22,17 +23,26 @@ const HomePage = () => {
             </h1>
             <h4 className="text-light text-center">-Neil deGrasse Tyson</h4>
           </Bounce>
-          <div className={styles.scroll_downs}>
-            <div className={styles.mousey}>
-              <div className={styles.scroller} />
+          <Link
+            activeClass="active"
+            to="section1"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={800}>
+            <div className={styles.scroll_downs}>
+              <div className={styles.mousey}>
+                <div className={styles.scroller} />
+              </div>
             </div>
-          </div>
+          </Link>
+
           <Flash duration={3500} forever>
             <p className={styles.explore_text}>EXPLORE</p>
           </Flash>
         </div>
       </div>
-      <div className={styles.bottom_container_wrapper}>
+      <div className={styles.bottom_container_wrapper} id="section1">
         <Container>
           <Row>
             <Col sm="12" md="6">
