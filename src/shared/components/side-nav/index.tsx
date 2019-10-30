@@ -1,7 +1,6 @@
 import React from "react";
 import {Nav, NavItem} from "reactstrap";
 import {Link} from "react-router-dom";
-import RubberBand from "react-reveal/RubberBand";
 import {bubble as Menu} from "react-burger-menu";
 const s = require("./styles.module.scss");
 
@@ -52,7 +51,7 @@ const styles = {
 
 const SideNav = () => {
   return (
-    <Menu styles={styles} right>
+    <Menu burgerButtonClassName={s.burgerMenu} styles={styles} right>
       <Link to="/home">
         <h2 className="text-light">Space Gazer</h2>
       </Link>

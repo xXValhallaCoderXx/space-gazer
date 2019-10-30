@@ -2,7 +2,7 @@ import React from "react";
 import {hot} from "react-hot-loader";
 import {ParallaxProvider} from "react-scroll-parallax";
 
-import {Route, Router, Switch} from "react-router-dom";
+import {Route, Router, Switch, Redirect} from "react-router-dom";
 import {createBrowserHistory} from "history";
 
 import {

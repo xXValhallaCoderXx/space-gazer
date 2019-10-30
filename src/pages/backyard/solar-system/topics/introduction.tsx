@@ -11,13 +11,14 @@ const SolarSystemIntro = () => {
       <Row>
         <Col sm="12">
           <h1 className={`${styles.title} mt-5`}>Introduction</h1>
+          <p className={`${styles.main_text} mt-3`}>
+          Ahh, the solar system, our backyard!
+        </p>
         </Col>
       </Row>
       <Row>
-        <Col sm="8">
-          <p className={`${styles.main_text} mt-3`}>
-            Ahh, the solar system, our backyard!
-          </p>
+      
+        <Col sm="12" md="8" className="order-2 order-sm-1">
           <p className={styles.main_text}>
             The solar system was formed approximately{" "}
             <strong>4.6 billion years ago</strong> by the collapse of a giant
@@ -26,12 +27,9 @@ const SolarSystemIntro = () => {
             This eventually with numerous events, formed the planets and other
             bodies of the solar system.
           </p>
-          <p className={`${styles.main_text} mt-3`}>
-            Select from the <strong>dropdown above</strong> to learn more!
-          </p>
         </Col>
-        <Col sm="4">
-          <img src={universe1} height="300" />
+        <Col sm="12" md="4" className="order-1 order-sm-2">
+          <img src={universe1} className={styles.image_1} />
         </Col>
       </Row>
       <Row>

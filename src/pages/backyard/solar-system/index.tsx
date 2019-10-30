@@ -1,6 +1,7 @@
 import React from "react";
 import {RouteComponentProps} from "react-router-dom";
 import {Link} from "react-scroll";
+import Sticky from "react-stickynode";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
 import {Parallax} from "react-scroll-parallax";
 import Select from "react-select";
@@ -19,18 +20,30 @@ const confusedAlien = require("shared/images/icons/confused-alien.png");
 
 const options = [
   {value: "intro", label: "Introduction"},
-  {value: "solar", label: "Solar System", disabled: "yes"},
+  {value: "solar-system", label: "Solar System"},
   {value: "eclipse", label: "Solar Eclipse", disabled: "yes"},
   {value: "comets", label: "Comets", disabled: "yes"},
   {value: "asteroids", label: "Asteroids", disabled: "yes"}
 ];
 
-import {Intro} from "./topics";
+import {Intro, SolarSystem} from "./topics";
 
 const HomePage = (props: RouteComponentProps<any>) => {
   function onChange(data: any) {
     props.history.push(`/solar-system/main/${data.value}`);
     // setTopic(data.value);
+  }
+  function renderPage() {
+    console.log("PROPS: ", props);
+    let component;
+    switch (props.match.params.tab) {
+      case "solar-system":
+        component = <SolarSystem />;
+        break;
+      default:
+        component = <Intro />;
+    }
+    return component;
   }
   return (
     <LayoutMain nav>
@@ -65,33 +78,32 @@ const HomePage = (props: RouteComponentProps<any>) => {
       </div>
       <div className={styles.bottom_container_wrapper} id="section1">
         <Container>
-          <Row
-            className="bg-dark"
-            style={{
-              height: 80,
-              display: "flex",
-              borderRadius: 20,
-              alignItems: "center"
-            }}>
-            <Col md="2">
-              <h2 className={`${styles.category_title} mt-1`}>Select Topic</h2>
-            </Col>
-            <Col>
-              <Select
-                onChange={onChange}
-                value={options.find(
-                  option =>
-                    option.value === props.match.params.tab || "introduction"
-                )}
-                isOptionDisabled={option => option.disabled === "yes"}
-                placeholder="Select a Topic..."
-                options={options}
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Intro />
-          </Row>
+          <Sticky
+            innerZ={1000}
+            enabled={true}
+            top={0}
+            bottomBoundary={"#section1"}>
+            <Row className={styles.select_topic_wrapper}>
+              <Col sm="12" md="2">
+                <h2 className={`${styles.category_title} mt-1`}>
+                  Select Topic
+                </h2>
+              </Col>
+              <Col sm="10" md="10" style={{paddingRight: 100}}>
+                <Select
+                  onChange={onChange}
+                  value={options.find(
+                    option => option.value === props.match.params.tab
+                  )}
+                  isOptionDisabled={option => option.disabled === "yes"}
+                  placeholder="Select a Topic..."
+                  options={options}
+                />
+              </Col>
+            </Row>
+          </Sticky>
+
+          <Row>{renderPage()}</Row>
         </Container>
       </div>
     </LayoutMain>
