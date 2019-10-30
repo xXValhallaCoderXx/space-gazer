@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-scroll";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
 import {Parallax} from "react-scroll-parallax";
 import Flash from "react-reveal/Flash";
@@ -24,17 +25,25 @@ const HomePage = () => {
               Where are all the aliens?
             </h1>
           </Bounce>
-          <div className={styles.scroll_downs}>
-            <div className={styles.mousey}>
-              <div className={styles.scroller} />
+          <Link
+            activeClass="active"
+            to="section1"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={800}>
+            <div className={styles.scroll_downs}>
+              <div className={styles.mousey}>
+                <div className={styles.scroller} />
+              </div>
             </div>
-          </div>
+          </Link>
           <Flash duration={3500} forever>
             <p className={styles.explore_text}>EXPLORE</p>
           </Flash>
         </div>
       </div>
-      <div className={styles.bottom_container_wrapper}>
+      <div className={styles.bottom_container_wrapper} id="section1">
         <Container>
           <Row>
             <Col sm="9">
