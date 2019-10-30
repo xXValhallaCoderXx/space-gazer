@@ -22,6 +22,10 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
+.active_sticky {
+  background-color: red important;
+}
+
 $theme-colors: (
   "black": black
 );

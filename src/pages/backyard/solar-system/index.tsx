@@ -29,9 +29,22 @@ const options = [
 import {Intro, SolarSystem} from "./topics";
 
 const HomePage = (props: RouteComponentProps<any>) => {
+  const [isSticky, setIsSticky] = React.useState(false);
   function onChange(data: any) {
     props.history.push(`/solar-system/main/${data.value}`);
     // setTopic(data.value);
+  }
+
+  function handleStateChange(status: any) {
+    if (status.status === Sticky.STATUS_FIXED) {
+      setIsSticky(true);
+    }
+    if (status.status === Sticky.STATUS_ORIGINAL) {
+      setIsSticky(false);
+    }
+    if (status.status === Sticky.STATUS_RELEASED) {
+      console.log("the component is relea");
+    }
   }
   function renderPage() {
     console.log("PROPS: ", props);
@@ -45,6 +58,7 @@ const HomePage = (props: RouteComponentProps<any>) => {
     }
     return component;
   }
+  console.log("IS STIK: ", isSticky);
   return (
     <LayoutMain nav>
       <div className={styles.top_container_wrapper}>
@@ -77,32 +91,34 @@ const HomePage = (props: RouteComponentProps<any>) => {
         </div>
       </div>
       <div className={styles.bottom_container_wrapper} id="section1">
+        <Sticky
+          onStateChange={handleStateChange}
+          innerZ={1000}
+          enabled={true}
+          top={0}
+          bottomBoundary={"#section1"}>
+          <Row
+            className={`${isSticky ? styles.active_sticky : ""} ${
+              styles.select_topic_wrapper
+            }`}>
+            <Col sm="12" md="2" className="d-flex justify-content-center">
+              <h2 className={`${styles.category_title} mt-1`}>Select Topic</h2>
+            </Col>
+            <Col sm="10" md="10" style={{paddingRight: 100}}>
+              <Select
+                onChange={onChange}
+                value={options.find(
+                  option => option.value === props.match.params.tab
+                )}
+                isOptionDisabled={option => option.disabled === "yes"}
+                placeholder="Select a Topic..."
+                options={options}
+              />
+            </Col>
+          </Row>
+        </Sticky>
         <Container>
-          <Sticky
-            innerZ={1000}
-            enabled={true}
-            top={0}
-            bottomBoundary={"#section1"}>
-            <Row className={styles.select_topic_wrapper}>
-              <Col sm="12" md="2">
-                <h2 className={`${styles.category_title} mt-1`}>
-                  Select Topic
-                </h2>
-              </Col>
-              <Col sm="10" md="10" style={{paddingRight: 100}}>
-                <Select
-                  onChange={onChange}
-                  value={options.find(
-                    option => option.value === props.match.params.tab
-                  )}
-                  isOptionDisabled={option => option.disabled === "yes"}
-                  placeholder="Select a Topic..."
-                  options={options}
-                />
-              </Col>
-            </Row>
-          </Sticky>
-
+          <Row>{renderPage()}</Row>
           <Row>{renderPage()}</Row>
         </Container>
       </div>

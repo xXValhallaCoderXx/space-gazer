@@ -65,11 +65,14 @@
   }
   @include breakpoint(sm) {
     border-radius: 20px;
-    height: 80px;
+    padding-top: 30px;
+    height: 100px;
   }
 }
 
-
+.active_sticky {
+  
+}
 
 
 
