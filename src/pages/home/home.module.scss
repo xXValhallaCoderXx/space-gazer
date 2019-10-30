@@ -39,27 +39,24 @@
 
 .bg_wrapper_1 {
   height: 100%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 32, 62, 1) 66%,
-    rgba(0, 65, 125, 1) 100%
-  );
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("../../shared/images/bg/about-bg.png");
+  background-position: center;
+  background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
 }
 
+
 .bg_wrapper_2 {
   height: 100%;
-  background: rgb(0, 64, 124);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 64, 124, 1) 0%,
-    rgba(75, 134, 189, 1) 66%,
-    rgba(92, 162, 227, 1) 100%
-  );
+  background: rgb(8,5,22);
+  background: linear-gradient(180deg, rgba(8,5,22,1) 0%, rgba(56,91,162,1) 66%, rgba(83,147,238,1) 100%);
   color: white;
   overflow: hidden;
 }
