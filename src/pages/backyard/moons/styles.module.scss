@@ -7,7 +7,7 @@
 .top_container_wrapper {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../../shared/images/bg/where-aliens-bg.jpg");
+    url("../../../shared/images/bg/kuz-bg-1.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -17,20 +17,73 @@
 .bottom_container_wrapper {
   height: 100%;
   background-color: white;
+  padding-bottom: 40px;
+  margin-top: -1px;
   @include breakpoint(xs) {
-    padding-top: 50px;
+    padding-top: 0px;
   }
   @include breakpoint(sm) {
     padding-top: 100px;
   }
 }
 
+.title_caption {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(xs) {
+    padding: 15px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.4rem;
+    max-width: 750px;
+  }
+}
+
+.category_title {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    @include breakpoint(xs) {
+      display: none;
+      margin-bottom: -10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    @include breakpoint(sm) {
+      font-size: 1.5rem;
+    }
+}
+
+
+.select_topic_wrapper {
+  padding: 10px;
+  background-color: black;
+  @include breakpoint(xs) {
+    border-radius: 0px;
+    height: 110px;
+  }
+  @include breakpoint(sm) {
+    border-radius: 20px;
+    padding-top: 30px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
 .title_wrapper {
   max-width: 1200px;
   align-self: center;
 
   @include breakpoint(xs) {
-    margin-top: 60%;
+    margin-top: 30%;
     padding: 35px;
   }
   @include breakpoint(sm) {

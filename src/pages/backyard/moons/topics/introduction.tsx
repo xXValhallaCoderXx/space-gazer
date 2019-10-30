@@ -1,11 +1,23 @@
 import React from "react";
-const styles = require("./styles.module.scss");
 import {Link} from "react-router-dom";
+import {Col, Row, Container} from "reactstrap";
+const styles = require("./intro.module.scss");
 
-const PlanetHomeTab = () => {
+const universe1 = require("shared/images/universe-1.png");
+
+const SolarSystemIntro = () => {
   return (
-    <div>
-      <h2 className="mb-5">Moons</h2>
+    <Container>
+      <Row>
+        <Col sm="12">
+          <h1 className={`${styles.title} mt-5`}>Introduction</h1>
+          <p className={`${styles.main_text} mt-3`}>
+            We get to see this wonder, each night, but do you ever take a
+            moment, to stop, and realize to stare up, and realize all the
+            amazing energy surrounding us?
+          </p>
+        </Col>
+      </Row>
       <p>
         There are more than 194 moons of the various planets, dwarf planets in
         the solar system. The planets Mercury and Venus do not have any moons
@@ -33,8 +45,8 @@ const PlanetHomeTab = () => {
       <ul>
         <li className="ml-n2">Pluto, Haumea, Makemake, Eris</li>
       </ul>
-    </div>
+    </Container>
   );
 };
 
-export default PlanetHomeTab;
+export default SolarSystemIntro;
