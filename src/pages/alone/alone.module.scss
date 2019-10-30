@@ -24,6 +24,19 @@
     padding-top: 100px;
   }
 }
+.title_caption {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(xs) {
+    padding: 15px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.4rem;
+    max-width: 750px;
+  }
+}
 
 .title_wrapper {
   max-width: 1200px;

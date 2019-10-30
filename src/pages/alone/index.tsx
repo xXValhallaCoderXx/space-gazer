@@ -24,6 +24,12 @@ const HomePage = () => {
             <h1 className={`text-light ${styles.title}`}>
               Where are all the aliens?
             </h1>
+            <p className={styles.title_caption}>
+              I believe alien life is quite common in the universe, although
+              intelligent life is less so. Some say it has yet to appear on
+              planet Earth
+            </p>
+            <p className="text-center text-light">~Stephen Hawking</p>
           </Bounce>
           <Link
             activeClass="active"
