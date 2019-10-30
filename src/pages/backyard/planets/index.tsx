@@ -11,10 +11,14 @@ const styles = require("./styles.module.scss");
 
 const options = [
   {value: "intro", label: "Introduction"},
-  {value: "solar-system", label: "Solar System"},
-  {value: "eclipse", label: "Solar Eclipse", disabled: "yes"},
-  {value: "comets", label: "Comets", disabled: "yes"},
-  {value: "asteroids", label: "Asteroids", disabled: "yes"}
+  {value: "mercury", label: "Mercury", disabled: "yes"},
+  {value: "venus", label: "Venus", disabled: "yes"},
+  {value: "earth", label: "Earth", disabled: "yes"},
+  {value: "mars", label: "Mars", disabled: "yes"},
+  {value: "jupiter", label: "Jupiter", disabled: "yes"},
+  {value: "saturn", label: "Saturn", disabled: "yes"},
+  {value: "uranus", label: "Uranus", disabled: "yes"},
+  {value: "neptune", label: "Neptune", disabled: "yes"}
 ];
 
 import {Intro} from "./topics";
@@ -47,8 +51,11 @@ const PlanetsHome = (props: RouteComponentProps<any>) => {
         <div className={styles.title_wrapper}>
           <Bounce>
             <h1 className={`text-light ${styles.title}`}>The Planets</h1>
-            <p className={styles.title_caption}>BLah</p>
-            <p className="text-center text-light">~Paulo Coelho</p>
+            <p className={styles.title_caption}>
+              We all come from our own little planets. That's why we're all
+              different. That's what makes life interesting.
+            </p>
+            <p className="text-center text-light">~Robert E. Sherwood</p>
           </Bounce>
           <Link
             activeClass="active"

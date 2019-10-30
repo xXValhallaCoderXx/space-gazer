@@ -7,7 +7,7 @@
 .top_container_wrapper {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../../shared/images/bg/kuz-bg-3.jpg");
+    url("../../../shared/images/bg/kuz-bg-4.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -98,7 +98,7 @@
   align-items: center;
   margin-top: 150px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../../../shared/images/bg/kuz-bg-1.jpg");
+  url("../../../shared/images/bg/kuz-bg-4.png");
   @include breakpoint(xs) {
     height: 500px;
   }

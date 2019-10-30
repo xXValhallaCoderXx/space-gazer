@@ -2,23 +2,50 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Col, Row, Container} from "reactstrap";
 const styles = require("./intro.module.scss");
+import classNames from "classnames";
 
-const universe1 = require("shared/images/universe-1.png");
+const cx = classNames.bind(styles);
+const solar1 = require("shared/images/planets/planets-2.jpg");
 
 const PlanetsIntro = () => {
   return (
     <Container>
       <Row>
-        <Col sm="12">
-          <h1 className={`${styles.title} mt-5`}>Introdusction</h1>
-          <p className={`${styles.main_text} mt-3`}>
-            Our not so friendly neighbours!
+        <Col sm="12" className="p-4">
+          <h1 className={`${styles.title} mt-5`}>Introduction</h1>
+          <p className={`${styles.main_text} mt-3 p-0`}>
+            Our friendly <i>(well...some not so)</i> neighbours!
+          </p>
+          <p className={`${styles.main_text} mt-3 p-0`}>
+            There are <strong>8</strong> (not 9?) planets in our solar system,
+            they are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and
+            Neptune.
           </p>
         </Col>
       </Row>
       <Row>
-        <Col sm="12" md="4" className="order-1 order-sm-2">
-          <img src={universe1} className={styles.image_1} />
+        <Col sm="12" md="5" className="d-flex justify-content-center mt-5">
+          <img src={solar1} className={styles.image_1} />
+        </Col>
+        <Col sm="12" md="7" className={`${styles.why_8_wrapper} p-4`}>
+          <h3 className={styles.sub_title}>Why only 8 planets?</h3>
+          <p className={`${styles.main_text} mt-3 p-0`}>
+            This can be a touchy subject and lead to heated debates, Officiall,
+            there are 8 planets, the IAU (International Astronomical Union)
+            removed Pluto from the list of what had been nine planets in the
+            Solar System in August 2006, due to not meeting the{" "}
+            <a href="https://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
+              requirements
+            </a>
+            .
+          </p>
+          <p className={`${styles.main_text} mt-3 p-0`}>
+            Though there are many people, even from NASA itself to this{" "}
+            <a href="https://www.sciencealert.com/nasa-administrator-jim-bridenstine-says-pluto-is-a-planet">
+              day
+            </a>
+            , would disagree with the descison of the IAU.
+          </p>
         </Col>
       </Row>
       <Row>
@@ -26,34 +53,57 @@ const PlanetsIntro = () => {
           <h1 className={`${styles.title} mt-5`}>Interesting Facts</h1>
         </Col>
       </Row>
-      <p>
-        There are 8 planets in our solar system, they are Mercury Venus, Earth,
-        Mars, Jupiter, Saturn, Uranus and Neptune.
-      </p>
-      <p>
+      <p className={`${styles.main_text}`}>
         Planets in our solar system can be divided into two main groups,
         <strong>Terrestrial Planets</strong> and <strong>Gas Giants</strong>.
         Planets that orbit other stars are referred to as{" "}
         <strong>Exoplanets</strong>.
       </p>
-      <h2 className="mt-5">What is a planet?</h2>
-      <p>
+      <h2 className={`${styles.sub_title} mt-5`}>What is a planet?</h2>
+      <p className={`${styles.main_text}`}>
         Planets are among the many worlds and smaller objects that orbit the
-        Sun. The formal definition of planet, as voted on by the International
-        Astronomical Union in 2006, is as follows:
+        Sun. The{" "}
+        <a href="http://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
+          formal definition{" "}
+        </a>
+        of planet, as voted on by the IAU in 2006, is as follows:
       </p>
-      <h2 className="mt-5">Interesting facts</h2>
+      <div className="rounded overflow-hidden shadow-sm mt-5 bg-dark text-light p-4">
+        <p className={`${styles.sub_title} p-0`}>
+          A planet is a celestial body that
+        </p>
+        <div className="p-3">
+          <p className={`${styles.sub_text} p-0`}>
+            A - Is in orbit around the Sun
+          </p>
+          <p className={`${styles.sub_text} p-0`}>
+            B - Has sufficient mass for its self-gravity to overcome rigid body
+            forces so that it assumes a hydrostatic equilibrium (nearly round)
+            shape
+          </p>
+          <p className={`${styles.sub_text} p-0`}>
+            C - Has cleared the neighbourhood around its orbit.
+          </p>
+        </div>
+      </div>
+      <h2 className={`${styles.sub_title} mt-5`}>Interesting facts</h2>
       <ul>
         <li className="ml-n2">
-          <strong>Mercury’s</strong> craters are named after famous artists,
-          musicians and authors.
+          <p className={`${styles.main_text}`}>
+            <strong>Mercury’s</strong> craters are named after famous artists,
+            musicians and authors.
+          </p>
         </li>
         <li className="ml-n2 mt-3 ">
-          <strong>Venus</strong> is the hottest planet in the solar system.
+          <p className={`${styles.main_text}`}>
+            <strong>Venus</strong> is the hottest planet in the solar system.
+          </p>
         </li>
         <li className="ml-n2 mt-3">
-          <strong>Earth’s</strong> atmosphere protects us from meteoroids and
-          radiation from the Sun.
+          <p className={`${styles.main_text}`}>
+            <strong>Earth’s</strong> atmosphere protects us from meteoroids and
+            radiation from the Sun.
+          </p>
         </li>
       </ul>
     </Container>

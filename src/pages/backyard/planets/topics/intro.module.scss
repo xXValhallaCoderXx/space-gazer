@@ -3,15 +3,33 @@
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
 @import "shared/styles/_mixins.scss";
 
+.why_8_wrapper {
+  @include breakpoint(xs) {
+
+  }
+  @include breakpoint(sm) {
+   margin-top: 20px;
+  }
+}
 
 .title {
-  
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   @include breakpoint(xs) {
     font-size: 2.5rem;
   }
   @include breakpoint(sm) {
     font-size: 3rem;
+  }
+}
+
+.sub_title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  @include breakpoint(xs) {
+  }
+  @include breakpoint(sm) {
+    font-size: 2.5rem;
   }
 }
 
@@ -27,12 +45,26 @@
   }
 }
 
-
-.image_1 {
+.sub_text {
+  font-family: "Open Sans", sans-serif;
   @include breakpoint(xs) {
-   width: 100%;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 10px;
   }
   @include breakpoint(sm) {
-    height: 300px;
+    font-size: 1.5rem;
+  }
+}
+
+
+.image_1 {
+ 
+  @include breakpoint(xs) {
+    max-height: 300px;
+    margin-bottom: 50px;
+  }
+  @include breakpoint(sm) {
+    max-height: 350px;
   }
 }
