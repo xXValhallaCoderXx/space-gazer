@@ -68,8 +68,10 @@ const SideNav = () => {
           <NavItem className={s.link}>
             <Link to="/solar-system/planets">Planets</Link>
           </NavItem>
-          <NavItem className={s.link}>
-            <Link to="/solar-system/moons">Moons</Link>
+          <NavItem className={s.link} style={{pointerEvents: "none"}}>
+            <Link style={{color: "gray"}} to="/solar-system/moons">
+              Moons
+            </Link>
           </NavItem>
           <NavItem className={s.link} style={{pointerEvents: "none"}}>
             <Link style={{color: "gray"}} to="/">

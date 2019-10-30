@@ -2,21 +2,12 @@ import React from "react";
 import {RouteComponentProps} from "react-router-dom";
 import {Link} from "react-scroll";
 import Sticky from "react-stickynode";
-import {Card, CardBody, Container, Row, Col} from "reactstrap";
-import {Parallax} from "react-scroll-parallax";
+import {Container, Row, Col} from "reactstrap";
 import Select from "react-select";
 import Flash from "react-reveal/Flash";
-import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
-import {LayoutMain, Hero} from "shared/components";
+import {LayoutMain} from "shared/components";
 const styles = require("./styles.module.scss");
-
-const alien1 = require("shared/images/aliens/alien-1.png");
-const alienSpy = require("shared/images/icons/alien-spy.png");
-const earthShield = require("shared/images/icons/earth-sheild.png");
-const questionMark = require("shared/images/icons/question-mark.png");
-const clock = require("shared/images/icons/clock.png");
-const confusedAlien = require("shared/images/icons/confused-alien.png");
 
 const options = [
   {value: "intro", label: "Introduction"},
@@ -32,7 +23,6 @@ const HomePage = (props: RouteComponentProps<any>) => {
   const [isSticky, setIsSticky] = React.useState(false);
   function onChange(data: any) {
     props.history.push(`/solar-system/main/${data.value}`);
-    // setTopic(data.value);
   }
 
   function handleStateChange(status: any) {
@@ -42,12 +32,8 @@ const HomePage = (props: RouteComponentProps<any>) => {
     if (status.status === Sticky.STATUS_ORIGINAL) {
       setIsSticky(false);
     }
-    if (status.status === Sticky.STATUS_RELEASED) {
-      console.log("the component is relea");
-    }
   }
   function renderPage() {
-    console.log("PROPS: ", props);
     let component;
     switch (props.match.params.tab) {
       case "solar-system":
@@ -58,7 +44,6 @@ const HomePage = (props: RouteComponentProps<any>) => {
     }
     return component;
   }
-  console.log("IS STIK: ", isSticky);
   return (
     <LayoutMain nav>
       <div className={styles.top_container_wrapper}>
@@ -118,7 +103,6 @@ const HomePage = (props: RouteComponentProps<any>) => {
           </Row>
         </Sticky>
         <Container>
-          <Row>{renderPage()}</Row>
           <Row>{renderPage()}</Row>
         </Container>
       </div>
