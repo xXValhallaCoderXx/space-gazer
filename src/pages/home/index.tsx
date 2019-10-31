@@ -50,117 +50,122 @@ const HomePage = () => {
       <section
         className={styles.bg_wrapper_1}
         onMouseMove={({clientX: x, clientY: y}) => set({xy: calc(x, y)})}>
-        <div style={{maxWidth: 1500}}>
-          <Parallax y={[800, -100]}>
-            <RubberBand>
-              <div>
-                <img
-                  id="space-man"
-                  src={spaceMan}
-                  className={`${styles.space_man_1} ${styles.glow}`}
-                />
-                <Popup
-                  target="space-man"
-                  isOpen={isPopupOpen === "space-man"}
-                  toggle={togglePopup("space-man")}
-                  title="Greetings!"
-                  description="Lets get down to earth! Click on anything interesting on your journey to know more!"
-                />
-              </div>
-            </RubberBand>
-          </Parallax>
-
-          <Parallax y={[100, -50]} tagOuter="figure">
-            <div className={styles.titleWrapper}>
-              <h1 className={`${styles.titleText} text-center`}>
-                <RubberBand>Welcome to Space Gazer</RubberBand>
-              </h1>
-
+        <div className={styles.stars_small} />
+        <div className={styles.stars_medium} />
+        <div className={styles.stars_large} />
+        <div className="d-flex justify-content-center">
+          <div style={{maxWidth: 1500}}>
+            <Parallax y={[800, -100]}>
               <RubberBand>
-                <h2 className={`${styles.titleCaption} text-center mt-3`}>
-                  Lets get down to earth!
-                  <br />
-                  <Jump>
-                    <TiArrowDownOutline
-                      style={{color: "white", marginTop: 15}}
-                    />
-                  </Jump>
-                </h2>
+                <div>
+                  <img
+                    id="space-man"
+                    src={spaceMan}
+                    className={`${styles.space_man_1} ${styles.glow}`}
+                  />
+                  <Popup
+                    target="space-man"
+                    isOpen={isPopupOpen === "space-man"}
+                    toggle={togglePopup("space-man")}
+                    title="Greetings!"
+                    description="Lets get down to earth! Click on anything interesting on your journey to know more!"
+                  />
+                </div>
               </RubberBand>
-            </div>
-          </Parallax>
-          <Parallax y={[800, 100]}>
-            <LightSpeed>
-              <div className={`${styles.ufoWrapper} ${styles.glow}`}>
-                <animated.div
-                  id="ufo"
-                  className={styles.ufoBody}
-                  style={{transform: props.xy.interpolate(trans1)}}
-                />
-                <animated.div
-                  className={styles.ufoEye}
-                  style={{transform: props.xy.interpolate(trans2)}}
-                />
-                <Popup
-                  target="ufo"
-                  isOpen={isPopupOpen === "ufo"}
-                  toggle={togglePopup("ufo")}
-                  title="Are we alone?!"
-                  description="It is said that we have never made contact with alien life, but are we really alone?"
-                  link="/alone"
-                />
-              </div>
-            </LightSpeed>
-          </Parallax>
+            </Parallax>
 
-          <Parallax y={[500, -80]}>
-            <RubberBand>
-              <div>
-                <img
-                  id="astro"
-                  className={`${styles.astro} ${styles.glow}`}
-                  src={astro}
-                />
-                <Popup
-                  target="astro"
-                  isOpen={isPopupOpen === "astro"}
-                  toggle={togglePopup("astro")}
-                  title="Space Explorers!"
-                  description="Astronaughts are explorers of space! Thanks to them we have made many discoveries!"
-                  link={"/earth-orbit"}
-                />
-              </div>
-            </RubberBand>
-          </Parallax>
-          <Parallax y={[450, -100]}>
-            <img
-              id="ship"
-              className={`${styles.space_ship_img} ${styles.glow}`}
-              src={ship}
-            />
-            <Pulse duration={500} forever>
-              <img className={styles.space_ship_smoke_img} src={shipSmoke} />
-            </Pulse>
-          </Parallax>
-          <Parallax y={[700, 150]}>
-            <div className={`${styles.quote_1}`}>
-              <RubberBand>
-                <h1 className={`text-center ${styles.quote_1_text}`}>
-                  Somewhere, something incredible,
-                  <br /> is waiting to be known
+            <Parallax y={[100, -50]} tagOuter="figure">
+              <div className={styles.titleWrapper}>
+                <h1 className={`${styles.titleText} text-center`}>
+                  <RubberBand>Welcome to Space Gazer</RubberBand>
                 </h1>
-                <p className="text-center">~Carl Sagan</p>
+
+                <RubberBand>
+                  <h2 className={`${styles.titleCaption} text-center mt-3`}>
+                    Lets get down to earth!
+                    <br />
+                    <Jump>
+                      <TiArrowDownOutline
+                        style={{color: "white", marginTop: 15}}
+                      />
+                    </Jump>
+                  </h2>
+                </RubberBand>
+              </div>
+            </Parallax>
+            <Parallax y={[800, 100]}>
+              <LightSpeed>
+                <div className={`${styles.ufoWrapper} ${styles.glow}`}>
+                  <animated.div
+                    id="ufo"
+                    className={styles.ufoBody}
+                    style={{transform: props.xy.interpolate(trans1)}}
+                  />
+                  <animated.div
+                    className={styles.ufoEye}
+                    style={{transform: props.xy.interpolate(trans2)}}
+                  />
+                  <Popup
+                    target="ufo"
+                    isOpen={isPopupOpen === "ufo"}
+                    toggle={togglePopup("ufo")}
+                    title="Are we alone?!"
+                    description="It is said that we have never made contact with alien life, but are we really alone?"
+                    link="/alone"
+                  />
+                </div>
+              </LightSpeed>
+            </Parallax>
+
+            <Parallax y={[500, -80]}>
+              <RubberBand>
+                <div>
+                  <img
+                    id="astro"
+                    className={`${styles.astro} ${styles.glow}`}
+                    src={astro}
+                  />
+                  <Popup
+                    target="astro"
+                    isOpen={isPopupOpen === "astro"}
+                    toggle={togglePopup("astro")}
+                    title="Space Explorers!"
+                    description="Astronaughts are explorers of space! Thanks to them we have made many discoveries!"
+                    link={"/earth-orbit"}
+                  />
+                </div>
               </RubberBand>
-            </div>
-            <Popup
-              target="ship"
-              isOpen={isPopupOpen === "ship"}
-              toggle={togglePopup("ship")}
-              title="Space Travel!"
-              description="These are our vessels that allow us to explore space"
-              link={"/earth-orbit"}
-            />
-          </Parallax>
+            </Parallax>
+            <Parallax y={[450, -100]}>
+              <img
+                id="ship"
+                className={`${styles.space_ship_img} ${styles.glow}`}
+                src={ship}
+              />
+              <Pulse duration={500} forever>
+                <img className={styles.space_ship_smoke_img} src={shipSmoke} />
+              </Pulse>
+            </Parallax>
+            <Parallax y={[700, 150]}>
+              <div className={`${styles.quote_1}`}>
+                <RubberBand>
+                  <h1 className={`text-center ${styles.quote_1_text}`}>
+                    Somewhere, something incredible,
+                    <br /> is waiting to be known
+                  </h1>
+                  <p className="text-center">~Carl Sagan</p>
+                </RubberBand>
+              </div>
+              <Popup
+                target="ship"
+                isOpen={isPopupOpen === "ship"}
+                toggle={togglePopup("ship")}
+                title="Space Travel!"
+                description="These are our vessels that allow us to explore space"
+                link={"/earth-orbit"}
+              />
+            </Parallax>
+          </div>
         </div>
       </section>
       <section style={{marginTop: -1}} className={styles.bg_wrapper_2}>
