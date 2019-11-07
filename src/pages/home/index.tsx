@@ -50,9 +50,6 @@ const HomePage = () => {
       <section
         className={styles.bg_wrapper_1}
         onMouseMove={({clientX: x, clientY: y}) => set({xy: calc(x, y)})}>
-        <div className={styles.stars_small} />
-        <div className={styles.stars_medium} />
-        <div className={styles.stars_large} />
         <div className="d-flex justify-content-center">
           <div style={{maxWidth: 1500}}>
             <Parallax y={[800, -100]}>

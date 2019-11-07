@@ -3,6 +3,7 @@ import {Link} from "react-scroll";
 import {Card, CardBody, Container, Row, Col} from "reactstrap";
 import {Parallax} from "react-scroll-parallax";
 import Flash from "react-reveal/Flash";
+import Pulse from "react-reveal/Pulse";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import {LayoutMain, Hero} from "shared/components";
@@ -55,33 +56,37 @@ const HomePage = () => {
             <Col sm="9">
               <div>
                 <p className={styles.intro_text}>
-                  Day by day in the morder hectic daily lifestyle, its very easy
-                  to forget the
-                  <strong> beauty of the universe</strong> that we live in this
-                  very moment, from trying to comprehend its sheer size, to the
-                  wonders of how it came to be.
+                  In this day and age, our daily schedules and lifestyle, can
+                  become quite hectic. It's very easy to forget, the{" "}
+                  <strong>sheer beauty of the universe</strong> and take for
+                  granted everything that is happening around us every second,
                 </p>
                 <p className={styles.intro_text}>
-                  The size of the Earth may seem vast to us, but in reality, it
-                  does not even compare to a grain of sand, in a universe that
-                  is estimated to contain over 200 billion galaxies. This is
-                  something to think about, the next time we take our lives too
-                  seriously.
+                  We may think as the size of the Earth as <strong>vast</strong>
+                  , but when compared to the size of the universe, the earth
+                  would even be the equivilant of a grain of sand, within a
+                  universe that is estimated to contain over{" "}
+                  <strong>200 billion </strong>
+                  galaxies. The next time, we take our lives too seriously, take
+                  a moment, and remember we are but a speck in the vast cosmos.
                 </p>
                 <p className={styles.intro_text}>
                   When you gaze up into the starry night sky, we have every
                   reason to be <strong>struck with awe</strong>, and
-                  overwhelming feelings of curiosity. Since the universe is so
-                  vast, and the number of galaxies, starts planets in it, surely
-                  there must be other sentient life our there, But....Why havent
-                  we heard from them?
+                  overwhelming feelings of curiosity. The universe is so vast,
+                  with the number of galaxies, stars and planets in it,{" "}
+                  <strong>surely </strong>
+                  there must be other <strong>sentient life</strong> our there,
+                  But....Why havent we heard from them?
                 </p>
               </div>
             </Col>
             <Col
               sm="3"
               className="d-flex justify-content-center align-items-center">
-              <img src={alien1} className={styles.alien_1} />
+              <Pulse forever duration={4000}>
+                <img src={alien1} className={styles.alien_1} />
+              </Pulse>
             </Col>
           </Row>
         </Container>
@@ -105,8 +110,9 @@ const HomePage = () => {
               </p>
               <p className={styles.intro_text}>
                 The paradox attempts to make sense of the contradiction between
-                the potential for sentient life in the universe, and why we have
-                yet ever encountered any.
+                the <strong>potential for sentient life</strong> in the
+                universe, and why we have
+                <strong> yet ever encountered any</strong>.
               </p>
             </Col>
           </Row>
@@ -124,8 +130,9 @@ const HomePage = () => {
                   <h2 className={styles.sub_title}>It takes time</h2>
                   <p className={styles.intro_text}>
                     One explanation for the Fermi Paradox is that it will just{" "}
-                    <strong>takes a lot of time</strong>, for any kind of signal
-                    to travel across the vast cosmos from one point to another.
+                    <strong>take time (alot of it)</strong>, for any kind of
+                    signal to travel across the vast cosmos from one point to
+                    another.
                   </p>
                   <p className={styles.intro_text}>
                     It would also take time{" "}
@@ -134,10 +141,11 @@ const HomePage = () => {
                     communication, travel or colonization.
                   </p>
                   <p className={styles.intro_text}>
-                    Their may be signals outthere, just simply not have had
-                    enough time to reach us, given the size of the universe, and
-                    the pace of evolution, we may simply need to wait a length
-                    of time, which may pass over many generations of humans.
+                    Their may be signals out there, which have simply just{" "}
+                    <strong>not had enough time</strong> to reach us. Given the
+                    size of the universe, and the pace of evolution, we may
+                    simply need to wait a length of time, which may pass many
+                    generations of humans, before one reaches us.
                   </p>
                 </Col>
                 <Col
@@ -163,24 +171,28 @@ const HomePage = () => {
                     life in other parts of the universe will have taken the same
                     evolutional path as ourselves, So there is no way of
                     determining by what means of communcation they would even
-                    use.
+                    use (sound, visual etc).
                   </p>
                   <p className={styles.intro_text}>
-                    There have been many organizations that are focused on
-                    sending and detecting radio signals, but other
-                    extraterrestial beings could use a completely different
-                    approach, which we currently have no way to detect or
-                    decipher, beyond our current understanding.
+                    There are organizations that are focused on sending and
+                    detecting radio signals, but other extraterrestial beings
+                    could use a <strong>completely different approach</strong>,
+                    which we currently have no way to detect or decipher, beyond
+                    our current understanding.
                   </p>
                   <p className={styles.intro_text}>
                     Their language, mathematics and scientific understandings
-                    could be beyond anything we could ever comprehend.
+                    could be beyond{" "}
+                    <strong>anything we could ever comprehend</strong>.
                   </p>
                   <p className={styles.intro_text}>
-                    A specific quote from Neil deGrasse Tyson states "imagine a
-                    life form whose brain power is to ours as ours is to a
-                    chimpanzee’s. To such a species, our highest mental
-                    achievements would be trivial."
+                    A relative quote from <strong>Neil deGrasse Tyson</strong>{" "}
+                    states{" "}
+                    <i>
+                      "imagine a life form whose brain power is to ours as ours
+                      is to a chimpanzee’s. To such a species, our highest
+                      mental achievements would be trivial."
+                    </i>
                   </p>
                 </Col>
               </Row>
@@ -192,23 +204,24 @@ const HomePage = () => {
                     Zoo, Planetarium and Simulation Hypotheses
                   </h2>
                   <p className={styles.intro_text}>
-                    The Zoo hypotheses suggests that any extraterrestial beings,
-                    may not just be observing us already, but have us locked in
-                    their own "zoo", which prevents us from being visted, in
-                    order to allow humanity natural and social development.
+                    The <strong>Zoo hypotheses</strong> suggests that any
+                    extraterrestial beings, may not just be observing us
+                    already, but have us locked in their own "zoo", which
+                    prevents us from being visted, in order to allow humanity
+                    natural and social development.
                   </p>
                   <p className={styles.intro_text}>
-                    The Planetarium hypotheses claims that out understanding of
-                    the universe is a mere illusion created by cosmic beings
-                    able to manipulate energy and matter at a cosmic scale. So
-                    what we currently percieve to be the universe, could be part
-                    of a species-wide illusion.
+                    The <strong>Planetarium hypotheses</strong> claims that out
+                    understanding of the universe is a mere illusion created by
+                    cosmic beings able to manipulate energy and matter at a
+                    cosmic scale. So what we currently percieve to be the
+                    universe, could be part of a species-wide illusion.
                   </p>
                   <p className={styles.intro_text}>
-                    The Simulation hypotheses makes a similar proposition to the
-                    Planetarium, that we are living in a computer simulation
-                    being run by a post-human civilation, very much like the
-                    famous game "The Sims"
+                    The <strong>Simulation hypotheses</strong> makes a similar
+                    proposition to the Planetarium, that we are living in a
+                    computer simulation being run by a post-human civilation,
+                    very much like the famous game "The Sims"
                   </p>
                 </Col>
                 <Col
@@ -237,40 +250,49 @@ const HomePage = () => {
               className="d-flex justify-content-center align-items-center">
               <p className={`${styles.intro_text} mt-5 text-center pl-5 pr-5`}>
                 This is one of the great things about the cosmos, there are
-                endless propositions and questions surrounding it. You are left
-                to dream, and choose which ever theory you sounds most
-                believable for you and find yourself in the cosmos
+                <strong> endless</strong> propositions and questions surrounding
+                it. You are left to dream, imagine and choose which ever theory
+                you sounds most plausible for you and{" "}
+                <strong>find yourself in the cosmos</strong>.
               </p>
             </Col>
 
             <Col sm="9" md="12" className="p-5">
               <h2 className={styles.sub_title}>The First Born</h2>
               <p className={styles.intro_text}>
-                What is the specific sequence of events that occured on earth to
-                give life, and allow for humans to evolve is an extremley rare
-                event, we could be the "first born" of the universe. This could
-                be the very first time, life has ever been able to evolve This
-                is one of the great things of the universe, there are endless
-                propositions and endless questions with regard to the comos,
-                What if the specific chain of events that occured for earth to
-                give life, and allow for humans to evolve are extremley rare and
-                we could be one of "first born" in the universe. This could be
-                the first time, that life has been able to evolve, uninterupted
-                by any cosmic threats and astrological disasters (sorry
-                dinosaurs).
+                A very <strong>specific sequence</strong> of events had to
+                occur, not only <strong>in order</strong>, but at the{" "}
+                <strong>correct time</strong> also, to create the opporunity for
+                life to begin on earth, and allow for evolution to take over to
+                make what we are today, this sequence of events could be{" "}
+                <strong>so rare</strong> that, we could be the{" "}
+                <strong>"first born"</strong> of the universe.
+              </p>
+              <p className={styles.intro_text}>
+                This could be the very <strong>first time</strong>, life has
+                ever been able to evolve to this level, uninterupted by any
+                cosmic threats and astrological disasters (sorry dinosaurs)..
+                This is one of the great things of the universe, there are
+                endless questions and theories with regard to the comos.
               </p>
               <h2 className={`${styles.sub_title} mt-5`}>
                 Find the Cosmos, Find yourself
               </h2>
               <p className={styles.intro_text}>
-                Looking at things this way, can be pretty terrifying, the
-                feeling of anxiety could be overwhelming by thoughts of
-                intergalatic lonliness. Though this could also be looked at
-                another way, this could contribute towards a positive
-                transformation for our species on how we treat one another on
-                earth. It can help to motivate us to treat our planet and all
-                life on it, knowing that we may never find such prosperity
-                elsewhere in the vast cosmos.
+                Thinking of life from this perspective, can be pretty{" "}
+                <strong>terrifying</strong>, the feeling of anxiety could be
+                overwhelming by thoughts of intergalatic lonliness. Though this
+                could also be looked at
+                <strong>another way</strong>, this could contribute towards a{" "}
+                <strong>positive transformation</strong> for our species on how
+                we treat one another on earth.
+              </p>
+              <p className={styles.intro_text}>
+                Our lives are truly special, and so is the world that we live
+                in. Spreading <strong>awareness</strong> of these facts, can
+                help to <strong>motivate</strong> us to treat our planet and all
+                life on it with care, knowing that we may never find a place as
+                prosperous elsewhere in the vast cosmos, that we can call home.
               </p>
             </Col>
           </Row>
