@@ -19,19 +19,12 @@
   background-color: white;
   padding-bottom: 40px;
   margin-top: -1px;
-  @include breakpoint(xs) {
-    padding-top: 0px;
-  }
-  @include breakpoint(sm) {
-    padding-top: 100px;
-  }
 }
 
 .title_caption {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
   color: white;
-  font-family: "Open Sans", sans-serif;
   @include breakpoint(xs) {
     padding: 15px;
   }
@@ -87,7 +80,7 @@
     padding: 35px;
   }
   @include breakpoint(sm) {
-    margin-top: 25%;
+    margin-top: 200px;
   }
 }
 
@@ -130,7 +123,6 @@
 /* FONTS START */
 
 .title {
-  font-family: "Open Sans", sans-serif;
   text-align: center;
   font-weight: 800;
   @include breakpoint(xs) {
