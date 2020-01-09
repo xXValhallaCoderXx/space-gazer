@@ -11,7 +11,7 @@ const styles = require("./styles.module.scss");
 
 const options = [
   {value: "intro", label: "Introduction"},
-  {value: "solar-system", label: "Solar System"},
+  {value: "solar-system", label: "Solar System", disabled: "yes"},
   {value: "eclipse", label: "Solar Eclipse", disabled: "yes"},
   {value: "comets", label: "Comets", disabled: "yes"},
   {value: "asteroids", label: "Asteroids", disabled: "yes"}

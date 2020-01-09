@@ -185,7 +185,7 @@ const HomePage = () => {
               link={"/earth-orbit"}
             />
           </Parallax>
-          <Parallax x={[-300, 90]}>
+          <Parallax x={[-450, 90]}>
             <img
               id="airplane"
               src={airplane1}

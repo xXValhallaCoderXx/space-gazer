@@ -19,12 +19,7 @@
   background-color: white;
   padding-bottom: 40px;
   margin-top: -1px;
-  @include breakpoint(xs) {
-    padding-top: 0px;
-  }
-  @include breakpoint(sm) {
-    padding-top: 100px;
-  }
+
 }
 
 .title_caption {
