@@ -4,6 +4,7 @@ const path = require("path");
 const parts = require("./webpack.parts");
 const safeParser = require("postcss-safe-parser");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 productionConfig = app =>
   merge([
