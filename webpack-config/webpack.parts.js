@@ -61,6 +61,17 @@ exports.minifyCSS = ({options}) => ({
   ]
 });
 
+exports.imageMin = () => ({
+  plugins: [
+    new ImageminPlugin({
+      pngquant: {
+        quality: '70'
+      },
+      plugins: [imageminMozjpeg({quality: 70})]
+    })
+  ]
+})
+
 /********************
  * UTIL FUNCTIONS
     - Functions below provide extra utilities for either enviroment
