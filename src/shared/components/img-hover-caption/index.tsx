@@ -11,11 +11,7 @@ interface IProps {
 const ImageHoverCaption = (props: IProps) => {
   return (
     <div className={styles.img_container}>
-      <img
-        src={props.src}
-        height={props.height}
-        className={`${styles.img_styles} ${props.className}`}
-      />
+      <img src={props.src} height={props.height} className={`${styles.img_styles} ${props.className}`} />
       <div className={styles.middle}>
         <div className={styles.text}>{props.caption}</div>
       </div>

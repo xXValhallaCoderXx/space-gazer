@@ -12,12 +12,8 @@ const NotFound = () => {
   return (
     <div className={styles.notfound_wrapper}>
       <div className="d-flex justify-content-center align-items-center flex-column mt-5">
-        <h1 className={`fs-md-xxl fs-sm-xxl text-light ${styles.title_text}`}>
-          404
-        </h1>
-        <p className="text-light text-center pl-4 pr-4">
-          You have boldy gone, where no other has gone before!
-        </p>
+        <h1 className={`fs-md-xxl fs-sm-xxl text-light ${styles.title_text}`}>404</h1>
+        <p className="text-light text-center pl-4 pr-4">You have boldy gone, where no other has gone before!</p>
         <p className="text-light mt-2">Click below, to teleport back</p>
         <Link className="btn btn-secondary" to="/home">
           Home

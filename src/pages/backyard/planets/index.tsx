@@ -18,7 +18,7 @@ const options = [
   {value: "jupiter", label: "Jupiter", disabled: "yes"},
   {value: "saturn", label: "Saturn", disabled: "yes"},
   {value: "uranus", label: "Uranus", disabled: "yes"},
-  {value: "neptune", label: "Neptune", disabled: "yes"}
+  {value: "neptune", label: "Neptune", disabled: "yes"},
 ];
 
 import {Intro} from "./topics";
@@ -52,18 +52,12 @@ const PlanetsHome = (props: RouteComponentProps<any>) => {
           <Bounce>
             <h1 className={`text-light ${styles.title}`}>The Planets</h1>
             <p className={styles.title_caption}>
-              We all come from our own little planets. That's why we're all
-              different. That's what makes life interesting.
+              We all come from our own little planets. That's why we're all different. That's what makes life
+              interesting.
             </p>
             <p className="text-center text-light">~Robert E. Sherwood</p>
           </Bounce>
-          <Link
-            activeClass="active"
-            to="section1"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={800}>
+          <Link activeClass="active" to="section1" spy={true} smooth={true} offset={0} duration={800}>
             <div className={styles.scroll_downs}>
               <div className={styles.mousey}>
                 <div className={styles.scroller} />
@@ -76,25 +70,15 @@ const PlanetsHome = (props: RouteComponentProps<any>) => {
         </div>
       </div>
       <div className={styles.bottom_container_wrapper} id="section1">
-        <Sticky
-          onStateChange={handleStateChange}
-          innerZ={1000}
-          enabled={true}
-          top={0}
-          bottomBoundary={"#section1"}>
-          <Row
-            className={`${isSticky ? styles.active_sticky : ""} ${
-              styles.select_topic_wrapper
-            }`}>
+        <Sticky onStateChange={handleStateChange} innerZ={1000} enabled={true} top={0} bottomBoundary={"#section1"}>
+          <Row className={`${isSticky ? styles.active_sticky : ""} ${styles.select_topic_wrapper}`}>
             <Col sm="12" md="2" className="d-flex justify-content-center">
               <h2 className={`${styles.category_title} mt-1`}>Select Topic</h2>
             </Col>
             <Col sm="10" md="10" style={{paddingRight: 100}}>
               <Select
                 onChange={onChange}
-                value={options.find(
-                  option => option.value === props.match.params.tab
-                )}
+                value={options.find(option => option.value === props.match.params.tab)}
                 isOptionDisabled={option => option.disabled === "yes"}
                 placeholder="Select a Topic..."
                 options={options}

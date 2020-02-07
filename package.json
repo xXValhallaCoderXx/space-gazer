@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --env.target development --config ./webpack-config/index.js",
     "build": "webpack --env.target production --config ./webpack-config/index.js",
     "build:stats": "webpack --env.target production --config ./webpack-config/index.js --json > stats.json",
-    "ts:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "es:lint": "eslint 'src/**/*.{ts,tsx}'",
     "pm2:start": "pm2 start server.js",
     "pm2:kill": "pm2 kill",
     "start:local": "node server.js",

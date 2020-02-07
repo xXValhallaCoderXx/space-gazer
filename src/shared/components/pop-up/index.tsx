@@ -14,15 +14,9 @@ interface IProps {
 const Popup = (props: IProps) => {
   return (
     <div>
-      <Popover
-        placement="bottom"
-        isOpen={props.isOpen}
-        target={props.target}
-        toggle={props.toggle}>
+      <Popover placement="bottom" isOpen={props.isOpen} target={props.target} toggle={props.toggle}>
         <PopoverHeader>
-          <span style={{fontSize: 20, fontWeight: 800}}>
-            {props.title || ""}
-          </span>
+          <span style={{fontSize: 20, fontWeight: 800}}>{props.title || ""}</span>
         </PopoverHeader>
         <PopoverBody>
           <p style={{fontSize: 16}}>{props.description}</p>

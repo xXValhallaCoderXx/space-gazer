@@ -13,10 +13,7 @@ const InfoCard1 = (props: IProps) => {
         <h1 className="text-dark" style={{marginBottom: -20}}>The Solar System</h1>>
       </CardHeader> */}
       <CardBody>
-        <p className="text-dark">
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum
-        </p>
+        <p className="text-dark">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
       </CardBody>
     </Card>
   );
