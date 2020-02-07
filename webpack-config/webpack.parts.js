@@ -122,8 +122,8 @@ exports.loadJavaScript = ({include, exclude} = {}) => ({
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({
-      // tslint: true,
-      workers: 2,
+      eslint: true,
+      workers: 1,
       // watch: [include[0], include[1]]
     }),
   ],
