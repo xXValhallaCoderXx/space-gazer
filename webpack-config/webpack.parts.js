@@ -23,14 +23,14 @@ exports.devServer = ({host, port} = {}) => ({
     port, // Defaults to 8080
     overlay: {
       errors: true,
-      warnings: true
-    }
-  }
+      warnings: true,
+    },
+  },
 });
 
 exports.generateSourceMaps = ({type}) => ({
   // Handles the type of Source map to use
-  devtool: type
+  devtool: type,
 });
 
 /********************
@@ -40,14 +40,14 @@ exports.generateSourceMaps = ({type}) => ({
 
 exports.clean = path => ({
   // Clean the current build folder to ensure to old files are leftover
-  plugins: [new CleanWebpackPlugin([path], {allowExternal: true})]
+  plugins: [new CleanWebpackPlugin([path], {allowExternal: true})],
 });
 
 exports.minifyJavaScript = () => ({
   // Minify JS Code
   optimization: {
-    minimizer: [new TerserPlugin({sourceMap: true})]
-  }
+    minimizer: [new TerserPlugin({sourceMap: true})],
+  },
 });
 
 exports.minifyCSS = ({options}) => ({
@@ -56,21 +56,21 @@ exports.minifyCSS = ({options}) => ({
     new OptimizeCSSAssetsPlugin({
       cssProcessor: cssnano,
       cssProcessorOptions: options,
-      canPrint: false
-    })
-  ]
+      canPrint: false,
+    }),
+  ],
 });
 
 exports.imageMin = () => ({
   plugins: [
     new ImageminPlugin({
       pngquant: {
-        quality: '70'
+        quality: "70",
       },
-      plugins: [imageminMozjpeg({quality: 70})]
-    })
-  ]
-})
+      plugins: [imageminMozjpeg({quality: 70})],
+    }),
+  ],
+});
 
 /********************
  * UTIL FUNCTIONS
@@ -82,7 +82,7 @@ exports.setFreeVariable = (key, value) => {
   const env = {};
   env[key] = JSON.stringify(value);
   return {
-    plugins: [new webpack.DefinePlugin(env)]
+    plugins: [new webpack.DefinePlugin(env)],
   };
 };
 
@@ -92,7 +92,7 @@ exports.setFreeVariables = data => {
     env[key] = JSON.stringify(data[key]);
   });
   return {
-    plugins: [new webpack.DefinePlugin(env)]
+    plugins: [new webpack.DefinePlugin(env)],
   };
 };
 
@@ -114,19 +114,19 @@ exports.loadJavaScript = ({include, exclude} = {}) => ({
           loader: "babel-loader",
           options: {
             // configFile: path.resolve(__dirname, '../babel.config.js'),
-            cacheDirectory: true
-          }
-        }
-      }
-    ]
+            cacheDirectory: true,
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({
-      tslint: true,
-      workers: 1
+      // tslint: true,
+      workers: 2,
       // watch: [include[0], include[1]]
-    })
-  ]
+    }),
+  ],
 });
 
 // Image Loader
@@ -139,11 +139,11 @@ exports.loadImages = ({include, exclude, options} = {}) => ({
         exclude,
         use: {
           loader: "url-loader",
-          options
-        }
-      }
-    ]
-  }
+          options,
+        },
+      },
+    ],
+  },
 });
 
 exports.fontLoader = () => ({
@@ -153,12 +153,12 @@ exports.fontLoader = () => ({
         test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: "file-loader"
-          }
-        ]
-      }
-    ]
-  }
+            loader: "file-loader",
+          },
+        ],
+      },
+    ],
+  },
 });
 
 // Load CSS for Development
@@ -167,28 +167,28 @@ exports.developmentCSS = () => ({
     rules: [
       {
         test: /^((?!\.module).)*scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.module.scss$/,
         use: [
           {
-            loader: "style-loader"
+            loader: "style-loader",
           },
           {
             loader: "css-loader",
             options: {
               modules: true,
-              localIdentName: "[local]_[hash:base64:8]"
-            }
+              localIdentName: "[local]_[hash:base64:8]",
+            },
           },
           {
-            loader: "sass-loader"
-          }
-        ]
-      }
-    ]
-  }
+            loader: "sass-loader",
+          },
+        ],
+      },
+    ],
+  },
 });
 
 // Extract CSS
@@ -196,8 +196,8 @@ exports.extractCSS = () => {
   return {
     plugins: [
       new MiniCssExtractPlugin({
-        filename: "static/styles/[name].[hash:8].css"
-      })
+        filename: "static/styles/[name].[hash:8].css",
+      }),
     ],
     module: {
       rules: [
@@ -211,46 +211,46 @@ exports.extractCSS = () => {
                 // you can specify a publicPath here
                 // by default it use publicPath in webpackOptions.output
                 // publicPath: '../'
-              }
+              },
             },
             {
-              loader: "css-loader"
+              loader: "css-loader",
             },
             {
-              loader: "sass-loader"
+              loader: "sass-loader",
             },
-            autoprefix()
-          ]
+            autoprefix(),
+          ],
         },
         {
           test: /\.module.scss$/,
 
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
             },
             {
               loader: "css-loader",
               options: {
                 importLoaders: 1,
                 modules: true,
-                localIdentName: "[local]_[hash:base64:8]"
-              }
+                localIdentName: "[local]_[hash:base64:8]",
+              },
             },
             {
-              loader: "sass-loader"
+              loader: "sass-loader",
             },
-            autoprefix()
-          ]
-        }
-      ]
-    }
+            autoprefix(),
+          ],
+        },
+      ],
+    },
   };
 };
 
 autoprefix = () => ({
   loader: "postcss-loader",
   options: {
-    plugins: () => [require("autoprefixer")()]
-  }
+    plugins: () => [require("autoprefixer")()],
+  },
 });

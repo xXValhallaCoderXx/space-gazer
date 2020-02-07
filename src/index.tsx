@@ -10,5 +10,5 @@ render(
   <ParallaxProvider>
     <Routes />
   </ParallaxProvider>,
-  root
+  root,
 );
