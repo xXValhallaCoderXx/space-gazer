@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import {Col, Row, Container} from "reactstrap";
 const styles = require("./intro.module.scss");
 
-const universe1 = require("shared/images/universe-1.png");
+// const universe1 = require("shared/images/universe-1.png");
 
 const SolarSystemIntro = () => {
   return (

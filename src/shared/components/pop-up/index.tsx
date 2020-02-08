@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Popover, PopoverHeader, PopoverBody} from "reactstrap";
 
-interface IProps {
+interface Props {
   isOpen: boolean;
   target: string;
   toggle: any;
@@ -11,7 +11,7 @@ interface IProps {
   link?: string;
 }
 
-const Popup = (props: IProps) => {
+const Popup = (props: Props) => {
   return (
     <div>
       <Popover placement="bottom" isOpen={props.isOpen} target={props.target} toggle={props.toggle}>

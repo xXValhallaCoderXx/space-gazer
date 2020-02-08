@@ -18,7 +18,7 @@ const spaceMan = require("shared/images/space-man-planet-1.png");
 const cloud1 = require("shared/images/clouds-1.png");
 const cloud2 = require("shared/images/clouds-2.png");
 const spaceSatellite = require("shared/images/space-satellite-1.png");
-const saucer1 = require("shared/images/flying-saucer-1.png");
+// const saucer1 = require("shared/images/flying-saucer-1.png");
 
 const calc = (x: any, y: any) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 
