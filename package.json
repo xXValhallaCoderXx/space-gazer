@@ -98,7 +98,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn ts:lint"
+      "pre-push": "yarn es:lint"
     }
   }
 }
