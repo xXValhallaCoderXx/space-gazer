@@ -1,7 +1,7 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-const Particles = () => (
+const ParticlesWrapper = () => (
   <div
     style={{
       position: "absolute",
@@ -120,4 +120,4 @@ const Particles = () => (
   </div>
 );
 
-export default Particles;
+export default ParticlesWrapper;

@@ -2,12 +2,17 @@
 @import "~bootstrap/scss/_variables.scss";
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
 
+@function safe-unquote($param) {
+  @return if(type-of($param) == string, unquote($param), $param);
+}
+
+
 @function box-shadow($stars) {
 	$bxshadow: ();
 	@for $i from 1 to $stars {
 		$bxshadow: append($bxshadow, (random(2000) + 0px) (random(2000) + 0px) #fff, comma);
 	}
-	@return unquote($bxshadow);
+	@return safe-unquote($bxshadow);
 }
 
 $bxshadow-large: box-shadow(300);
