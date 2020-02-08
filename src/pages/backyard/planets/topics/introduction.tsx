@@ -1,10 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import {Col, Row, Container} from "reactstrap";
 const styles = require("./intro.module.scss");
-import classNames from "classnames";
+// import classNames from "classnames";
 
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 const solar1 = require("shared/images/planets/planets-2.jpg");
 
 const PlanetsIntro = () => {
@@ -32,7 +32,10 @@ const PlanetsIntro = () => {
             This can be a touchy subject and lead to heated debates, Offically, there are 8 planets. The{" "}
             <span style={{fontWeight: 800}}>IAU</span> <i>(International Astronomical Union)</i> removed Pluto from the
             list of what had been nine planets in the Solar System in August 2006, due to not meeting the{" "}
-            <a target="_blank" href="https://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
               requirements
             </a>
             .
@@ -41,6 +44,7 @@ const PlanetsIntro = () => {
             Though many will disagree with this decision,{" "}
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.sciencealert.com/nasa-administrator-jim-bridenstine-says-pluto-is-a-planet">
               some even from within NASA.
             </a>

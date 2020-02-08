@@ -5,10 +5,10 @@ const astro = require("shared/images/astro-2.png");
 const planetBig = require("shared/images/space-planet-1.png");
 
 const NotFound = () => {
-  const [show, setShow] = React.useState(false);
-  React.useEffect(() => {
-    setShow(true);
-  }, []);
+  // const [show, setShow] = React.useState(false);
+  // React.useEffect(() => {
+  //   setShow(true);
+  // }, []);
   return (
     <div className={styles.notfound_wrapper}>
       <div className="d-flex justify-content-center align-items-center flex-column mt-5">

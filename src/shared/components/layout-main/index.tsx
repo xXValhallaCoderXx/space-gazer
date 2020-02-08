@@ -1,12 +1,12 @@
 import React from "react";
-import {NavBar, SideNav} from "shared/components";
+import {SideNav} from "shared/components";
 
-interface IProps {
+interface Props {
   children: any;
   nav?: boolean;
 }
 
-const LayoutMainContainer = (props: IProps) => {
+const LayoutMainContainer = (props: Props) => {
   const {children, nav} = props;
   return (
     <div style={{overflowX: "hidden"}}>
