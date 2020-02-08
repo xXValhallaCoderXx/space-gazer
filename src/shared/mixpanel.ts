@@ -16,8 +16,8 @@ const actions = {
   people: {
     set: (props: any) => {
       if (envCheck) mixpanel.people.set(props);
-    }
-  }
+    },
+  },
 };
 
-export let Mixpanel = actions;
+export const Mixpanel = actions;

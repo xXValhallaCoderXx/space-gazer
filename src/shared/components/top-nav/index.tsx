@@ -1,14 +1,5 @@
 import React from "react";
-const styles = require("./styles.module.scss");
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink} from "reactstrap";
 
 const LayoutMainContainer = () => {
   const [isOpen, setOpen] = React.useState(false);

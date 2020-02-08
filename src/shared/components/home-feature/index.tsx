@@ -8,9 +8,7 @@ const HomeFeature = () => {
       <img src={staturn} className={styles.home_feature_img} />
       <h3 className={styles.home_feature_title}>Solsar System</h3>
       <div>
-        <p className={styles.home_feature_description}>
-          10 Need-to-Know Things About the Solar System
-        </p>
+        <p className={styles.home_feature_description}>10 Need-to-Know Things About the Solar System</p>
       </div>
     </div>
   );

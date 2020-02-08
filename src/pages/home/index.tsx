@@ -18,23 +18,18 @@ const spaceMan = require("shared/images/space-man-planet-1.png");
 const cloud1 = require("shared/images/clouds-1.png");
 const cloud2 = require("shared/images/clouds-2.png");
 const spaceSatellite = require("shared/images/space-satellite-1.png");
-const saucer1 = require("shared/images/flying-saucer-1.png");
+// const saucer1 = require("shared/images/flying-saucer-1.png");
 
-const calc = (x: any, y: any) => [
-  x - window.innerWidth / 2,
-  y - window.innerHeight / 2
-];
+const calc = (x: any, y: any) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 
-const trans1: any = (x: any, y: any) =>
-  `translate3d(${x / 10}px,${y / 10}px,0)`;
-const trans2: any = (x: any, y: any) =>
-  `translate3d(${x / 8 + 45}px,${y / 8 - 230}px,0)`;
+const trans1: any = (x: any, y: any) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+const trans2: any = (x: any, y: any) => `translate3d(${x / 8 + 45}px,${y / 8 - 230}px,0)`;
 
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = React.useState("");
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
-    config: {mass: 10, tension: 550, friction: 140}
+    config: {mass: 10, tension: 550, friction: 140},
   }));
 
   const togglePopup = (type: string) => () => {
@@ -47,9 +42,7 @@ const HomePage = () => {
 
   return (
     <LayoutMain nav>
-      <section
-        className={styles.bg_wrapper_1}
-        onMouseMove={({clientX: x, clientY: y}) => set({xy: calc(x, y)})}>
+      <section className={styles.bg_wrapper_1} onMouseMove={({clientX: x, clientY: y}) => set({xy: calc(x, y)})}>
         <div className={styles.stars_small} />
         <div className={styles.stars_medium} />
         <div className={styles.stars_large} />
@@ -58,11 +51,7 @@ const HomePage = () => {
             <Parallax y={[800, -100]}>
               <RubberBand>
                 <div>
-                  <img
-                    id="space-man"
-                    src={spaceMan}
-                    className={`${styles.space_man_1} ${styles.glow}`}
-                  />
+                  <img id="space-man" src={spaceMan} className={`${styles.space_man_1} ${styles.glow}`} />
                   <Popup
                     target="space-man"
                     isOpen={isPopupOpen === "space-man"}
@@ -85,9 +74,7 @@ const HomePage = () => {
                     Lets get down to earth!
                     <br />
                     <Jump>
-                      <TiArrowDownOutline
-                        style={{color: "white", marginTop: 15}}
-                      />
+                      <TiArrowDownOutline style={{color: "white", marginTop: 15}} />
                     </Jump>
                   </h2>
                 </RubberBand>
@@ -96,15 +83,8 @@ const HomePage = () => {
             <Parallax y={[800, 100]}>
               <LightSpeed>
                 <div className={`${styles.ufoWrapper} ${styles.glow}`}>
-                  <animated.div
-                    id="ufo"
-                    className={styles.ufoBody}
-                    style={{transform: props.xy.interpolate(trans1)}}
-                  />
-                  <animated.div
-                    className={styles.ufoEye}
-                    style={{transform: props.xy.interpolate(trans2)}}
-                  />
+                  <animated.div id="ufo" className={styles.ufoBody} style={{transform: props.xy.interpolate(trans1)}} />
+                  <animated.div className={styles.ufoEye} style={{transform: props.xy.interpolate(trans2)}} />
                   <Popup
                     target="ufo"
                     isOpen={isPopupOpen === "ufo"}
@@ -120,11 +100,7 @@ const HomePage = () => {
             <Parallax y={[500, -80]}>
               <RubberBand>
                 <div>
-                  <img
-                    id="astro"
-                    className={`${styles.astro} ${styles.glow}`}
-                    src={astro}
-                  />
+                  <img id="astro" className={`${styles.astro} ${styles.glow}`} src={astro} />
                   <Popup
                     target="astro"
                     isOpen={isPopupOpen === "astro"}
@@ -137,11 +113,7 @@ const HomePage = () => {
               </RubberBand>
             </Parallax>
             <Parallax y={[450, -100]}>
-              <img
-                id="ship"
-                className={`${styles.space_ship_img} ${styles.glow}`}
-                src={ship}
-              />
+              <img id="ship" className={`${styles.space_ship_img} ${styles.glow}`} src={ship} />
               <Pulse duration={500} forever>
                 <img className={styles.space_ship_smoke_img} src={shipSmoke} />
               </Pulse>
@@ -171,11 +143,7 @@ const HomePage = () => {
       <section style={{marginTop: -1}} className={styles.bg_wrapper_2}>
         <div>
           <Parallax x={[50, -130]}>
-            <img
-              id="satellite"
-              src={spaceSatellite}
-              className={`${styles.space_satellite_1} ${styles.glow}`}
-            />
+            <img id="satellite" src={spaceSatellite} className={`${styles.space_satellite_1} ${styles.glow}`} />
             <Popup
               target="satellite"
               isOpen={isPopupOpen === "satellite"}
@@ -186,11 +154,7 @@ const HomePage = () => {
             />
           </Parallax>
           <Parallax x={[-450, 90]}>
-            <img
-              id="airplane"
-              src={airplane1}
-              className={`${styles.airplane_1} ${styles.glow}`}
-            />
+            <img id="airplane" src={airplane1} className={`${styles.airplane_1} ${styles.glow}`} />
             <Popup
               target="airplane"
               isOpen={isPopupOpen === "airplane"}
@@ -225,11 +189,7 @@ const HomePage = () => {
           </Parallax>
           <Parallax y={[250, 400]}>
             <Pulse duration={2500} forever>
-              <img
-                id="cloud1"
-                className={`${styles.cloud_1_img} ${styles.glow}`}
-                src={cloud1}
-              />
+              <img id="cloud1" className={`${styles.cloud_1_img} ${styles.glow}`} src={cloud1} />
               <Popup
                 target="cloud1"
                 isOpen={isPopupOpen === "cloud1"}
@@ -242,11 +202,7 @@ const HomePage = () => {
           </Parallax>
           <Parallax y={[50, 250]}>
             <Pulse duration={2500} forever>
-              <img
-                id="cloud2"
-                className={`${styles.cloud_2_img} ${styles.glow}`}
-                src={cloud2}
-              />
+              <img id="cloud2" className={`${styles.cloud_2_img} ${styles.glow}`} src={cloud2} />
               <Popup
                 target="cloud2"
                 isOpen={isPopupOpen === "cloud2"}
@@ -261,8 +217,8 @@ const HomePage = () => {
             <div className={`${styles.quote_3}`}>
               <RubberBand fraction={1}>
                 <h1 className={`text-center text-light ${styles.quote_3_text}`}>
-                  We live on this speck called Earth, think about what you might
-                  do, today or tomorrow, and make the most of it.
+                  We live on this speck called Earth, think about what you might do, today or tomorrow, and make the
+                  most of it.
                 </h1>
                 <p className="text-center">~Neil deGrasse Tyson</p>
               </RubberBand>
@@ -277,11 +233,7 @@ const HomePage = () => {
               description="Our home! How is it possible that there is so much life on earth? But the other planets in our solar system are desserted?"
               link={"/earth"}
             />
-            <img
-              id="earth"
-              className={`${styles.earth_img_1} ${styles.glow}`}
-              src={earth1}
-            />
+            <img id="earth" className={`${styles.earth_img_1} ${styles.glow}`} src={earth1} />
           </Pulse>
         </div>
       </section>

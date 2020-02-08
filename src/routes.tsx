@@ -6,16 +6,7 @@ import {Route, Router, Switch} from "react-router-dom";
 import {createBrowserHistory} from "history";
 import {ScrollTop} from "shared/hooks";
 
-import {
-  Home,
-  SolarSystem,
-  Moons,
-  Planets,
-  About,
-  NotFound,
-  Loading,
-  Alone
-} from "./pages";
+import {Home, SolarSystem, Moons, Planets, About, NotFound, Loading, Alone} from "./pages";
 
 const history = createBrowserHistory();
 

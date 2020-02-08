@@ -1,11 +1,11 @@
 import React from "react";
 const styles = require("./styles.module.scss");
 
-interface IProps {
+interface Props {
   id: string;
 }
 
-const Sun = (props: IProps) => {
+const Sun = (props: Props) => {
   return (
     <>
       <div className={styles.top} />

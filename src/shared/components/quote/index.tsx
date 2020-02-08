@@ -1,11 +1,11 @@
 import React from "react";
 
-interface IProps {
+interface Props {
   message: string;
   author: string;
 }
 
-const Quote = (props: IProps) => {
+const Quote = (props: Props) => {
   return (
     <div>
       {props.message}
