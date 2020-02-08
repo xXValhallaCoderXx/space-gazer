@@ -8,7 +8,7 @@ export {default as HomeFeatureRight} from "./home-feature-right";
 export {default as VerticalLine} from "./vertical-line";
 export {default as UfoMouseParallax} from "./ufo-mouse-parallax";
 export {default as Sun} from "./sun";
-export {default as HorizontalEarthParallax} from "./horizontal-earth";
+// export {default as HorizontalEarthParallax} from "./horizontal-earth";
 export {default as Popup} from "./pop-up";
 export {default as InfoCard1} from "./info-card-1";
 export {default as ImgHoverCaption} from "./img-hover-caption";
