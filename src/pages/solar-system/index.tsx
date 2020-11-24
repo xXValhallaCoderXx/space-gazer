@@ -1,13 +1,12 @@
-import React from "react";
-import { hot } from "react-hot-loader";
-import { ParallaxProvider } from "react-scroll-parallax";
+import React from 'react';
+import {hot} from 'react-hot-loader';
+import {ParallaxProvider} from 'react-scroll-parallax';
 
-import { Route, Switch } from "react-router-dom";
+import {Route, Switch} from 'react-router-dom';
 
-import SolarSystemModule from "./solar-system"
-import PlanetsModule from "./planets"
-import MoonsModule from "./moons"
-
+import SolarSystemModule from './solar-system';
+import PlanetsModule from './planets';
+import MoonsModule from './moons';
 
 const SolarSystemRoutes = () => {
     return (
