@@ -19,7 +19,7 @@ const Routes = () => {
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/alone" component={Alone} />
-          <Route exact path="/solar-system" component={SolarSystemModule} />
+          <Route path="/solar-system" component={SolarSystemModule} />
           <Route component={NotFound} />
         </Switch>
       </Router>
