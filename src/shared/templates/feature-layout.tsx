@@ -1,5 +1,4 @@
 import React from 'react';
-import {RouteComponentProps} from 'react-router-dom';
 import {Link} from 'react-scroll';
 import Sticky from 'react-stickynode';
 import {Container, Row, Col} from 'reactstrap';

@@ -33,7 +33,10 @@ const PlanetsIntro = () => {
                         <span style={{fontWeight: 800}}>IAU</span> <i>(International Astronomical Union)</i> removed
                         Pluto from the list of what had been nine planets in the Solar System in August 2006, due to not
                         meeting the{' '}
-                        <a target="_blank" href="https://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://www.iau.org/static/resolutions/Resolution_GA26-5-6.pdf">
                             requirements
                         </a>
                         .
@@ -42,6 +45,7 @@ const PlanetsIntro = () => {
                         Though many will disagree with this decision,{' '}
                         <a
                             target="_blank"
+                            rel="noreferrer"
                             href="https://www.sciencealert.com/nasa-administrator-jim-bridenstine-says-pluto-is-a-planet">
                             some even from within NASA.
                         </a>

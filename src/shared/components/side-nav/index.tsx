@@ -49,7 +49,7 @@ const styles = {
     },
 };
 
-const SideNav = () => {
+const SideNav = (): any => {
     return (
         <Menu burgerButtonClassName={s.burgerMenu} styles={styles} right>
             <Link to="/home">
@@ -75,7 +75,7 @@ const SideNav = () => {
                     </NavItem>
                     <NavItem className={s.link} style={{pointerEvents: 'none'}}>
                         <Link style={{color: 'gray'}} to="/">
-                            Earth's Defenses
+                            Earths Defenses
                         </Link>
                     </NavItem>
 

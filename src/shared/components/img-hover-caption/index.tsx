@@ -8,7 +8,7 @@ interface IProps {
     height?: string;
 }
 
-const ImageHoverCaption = (props: IProps) => {
+const ImageHoverCaption = (props: IProps): any => {
     return (
         <div className={styles.img_container}>
             <img src={props.src} height={props.height} className={`${styles.img_styles} ${props.className}`} />
