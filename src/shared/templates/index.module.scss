@@ -1,0 +1,279 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "shared/styles/_mixins.scss";
+
+/* WRAPPERS START */
+.top_container_wrapper {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/bg/kuz-bg-3.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom_container_wrapper {
+  height: 100%;
+  background-color: white;
+  padding-bottom: 40px;
+  margin-top: -1px;
+
+}
+
+.title_caption {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(xs) {
+    padding: 15px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.4rem;
+    max-width: 750px;
+  }
+}
+
+.category_title {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    @include breakpoint(xs) {
+      display: none;
+      margin-bottom: -10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    @include breakpoint(sm) {
+      font-size: 1.5rem;
+    }
+}
+
+
+.select_topic_wrapper {
+  padding: 10px;
+  background-color: black;
+  @include breakpoint(xs) {
+    border-radius: 0px;
+    height: 110px;
+  }
+  @include breakpoint(sm) {
+    border-radius: 20px;
+    padding-top: 30px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.title_wrapper {
+  max-width: 1200px;
+  align-self: center;
+
+  @include breakpoint(xs) {
+    margin-top: 30%;
+    padding: 35px;
+  }
+  @include breakpoint(sm) {
+    margin-top: 25%;
+  }
+}
+
+.fermi_bg_wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/bg/kuz-bg-1.jpg");
+  @include breakpoint(xs) {
+    height: 500px;
+  }
+  @include breakpoint(sm) {
+    height: 800px;
+  }
+}
+
+.fermi_bg_wrapper_2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  background-size: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/bg/kuz-bg-2.jpg");
+  @include breakpoint(xs) {
+    height: 500px;
+  }
+  @include breakpoint(sm) {
+    height: 800px;
+  }
+}
+
+
+/* WRAPPERS END */
+
+/* FONTS START */
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-weight: 800;
+  @include breakpoint(xs) {
+    font-size: 2.5rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 4rem;
+  }
+}
+
+.intro_text {
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(xs) {
+    padding: 15px;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.4rem;
+  }
+}
+
+.explore_text {
+  position: absolute;
+  color: white;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  width: 75px;
+}
+
+.footer_text {
+  text-align: center;
+  @include breakpoint(xs) {
+    font-size: 1.5rem;
+  }
+}
+
+.fermi_title {
+  position: relative;
+  top: 150px;
+  @include breakpoint(xs) {
+   font-size: 3.5rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 6.5rem;
+   }
+}
+
+.sub_header {
+  @include breakpoint(xs) {
+    font-size: 3.5rem;
+   }
+   @include breakpoint(sm) {
+     font-size: 6.5rem;
+    }
+}
+
+.sub_title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  @include breakpoint(xs) {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   @include breakpoint(sm) {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+   }
+}
+
+.basic_font {
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+/* IMAGES */
+
+.alien_1 {
+
+  @include breakpoint(xs) {
+    max-height: 220px;
+  }
+  @include breakpoint(sm) {
+    margin-left: 100px;
+    max-height: 300px;
+  }
+}
+
+.icon_image {
+  max-height: 180px;
+  @include breakpoint(xs) {
+    margin-bottom: 20px;
+  }
+  @include breakpoint(sm) {
+    margin-bottom: 0px;
+  }
+}
+
+
+.scroll_downs {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  margin: auto;
+
+  width: 34px;
+  height: 55px;
+}
+.scroll_downs:hover {
+  cursor: pointer;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Borders */

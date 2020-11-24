@@ -1,0 +1,31 @@
+.item1,
+.item2,
+.item3,
+.item4 {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.item1 {
+  min-width: 30ch;
+  min-height: 30ch;
+  width: 25vw;
+  height: 25vw;
+  max-width: 80ch;
+  max-height: 80ch;
+  background-image: url("../../../images/ufo-ship-1.png");
+}
+
+.item2 {
+  position: relative;
+  top: 400px;
+  left: 200px;
+  z-index: 1000;
+  width: 3ch;
+  height: 3ch;
+  background-image: url("../../../images/ufo-ship-eye-1.png");
+}

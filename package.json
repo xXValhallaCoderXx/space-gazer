@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --env.target development --config ./webpack-config/index.js",
     "build": "webpack --env.target production --config ./webpack-config/index.js",
     "build:stats": "webpack --env.target production --config ./webpack-config/index.js --json > stats.json",
-    "ts:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "pm2:start": "pm2 start server.js",
     "pm2:kill": "pm2 kill",
     "start:local": "node server.js",
@@ -34,37 +34,37 @@
     "@types/react-scroll": "^1.5.4",
     "@types/react-select": "^3.0.5",
     "@types/reactstrap": "^8.0.4",
-    "add": "^2.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
     "babel-runtime": "^6.26.0",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
     "file-loader": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^1.3.1",
-    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.2.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "lint-staged": "^10.5.2",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "pm2": "^4.1.2",
     "postcss-loader": "^3.0.0",
     "postcss-safe-parser": "^4.0.1",
-    "prettier": "^1.17.0",
+    "prettier": "^2.2.0",
     "react-hot-loader": "^4.8.4",
     "redux-logger": "^3.0.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
-    "tslint": "^5.16.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-config-standard": "^8.0.1",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.0.0",
     "typescript": "^3.4.5",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "url-loader": "^1.1.2",
@@ -72,8 +72,7 @@
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
-    "webpack-merge": "^4.2.1",
-    "yarn": "^1.19.1"
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@types/react-stickynode": "^1.4.0",
@@ -99,7 +98,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn ts:lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
