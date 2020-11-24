@@ -5,7 +5,7 @@ const styles = require('./intro.module.scss');
 
 const universe1 = require('shared/images/universe-1.png');
 
-const SolarSystemIntro = () => {
+const SolarSystemIntro = (): any => {
     return (
         <Container>
             <Row>
