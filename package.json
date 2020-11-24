@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --env.target development --config ./webpack-config/index.js",
     "build": "webpack --env.target production --config ./webpack-config/index.js",
     "build:stats": "webpack --env.target production --config ./webpack-config/index.js --json > stats.json",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "pm2:start": "pm2 start server.js",
     "pm2:kill": "pm2 kill",
     "start:local": "node server.js",
@@ -52,6 +52,7 @@
     "husky": "^2.2.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "lint-staged": "^10.5.2",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -102,7 +103,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-        "eslint --fix"
+      "eslint --fix"
     ]
-}
+  }
 }
