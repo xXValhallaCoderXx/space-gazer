@@ -1,19 +1,19 @@
-import React from "react";
-import {SideNav} from "shared/components";
+import React from 'react';
+import {NavBar, SideNav} from 'shared/components';
 
-interface Props {
-  children: any;
-  nav?: boolean;
+interface IProps {
+    children: any;
+    nav?: boolean;
 }
 
-const LayoutMainContainer = (props: Props) => {
-  const {children, nav} = props;
-  return (
-    <div style={{overflowX: "hidden"}}>
-      {nav && <SideNav />}
-      <div>{children}</div>
-    </div>
-  );
+const LayoutMainContainer = (props: IProps) => {
+    const {children, nav} = props;
+    return (
+        <div style={{overflowX: 'hidden'}}>
+            {nav && <SideNav />}
+            <div>{children}</div>
+        </div>
+    );
 };
 
 export default LayoutMainContainer;

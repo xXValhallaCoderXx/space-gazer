@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 interface Props {
-  message: string;
-  author: string;
+    message: string;
+    author: string;
 }
 
 const Quote = (props: Props) => {
-  return (
-    <div>
-      {props.message}
-      {props.author}
-    </div>
-  );
+    return (
+        <div>
+            {props.message}
+            {props.author}
+        </div>
+    );
 };
 
 export default Quote;
