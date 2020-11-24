@@ -8,4 +8,4 @@ const LandingPage = () => {
     return <div style={{backgroundColor: 'pink'}}>TEST</div>;
 };
 
-export default LandingPage;
+// export default LandingPage;
