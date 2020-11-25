@@ -205,7 +205,7 @@ const HomePage = () => {
                         </Col>
 
                         <Col sm="9" md="12" className="p-5">
-                            <h2 className={styles.sub_title}>The First Born</h2>
+                            <h2 className={styles.sub_title}></h2>
                             <p className={styles.intro_text}>
                                 What is the specific sequence of events that occured on earth to give life, and allow
                                 for humans to evolve is an extremley rare event, we could be the "first born" of the

@@ -4,30 +4,6 @@
 @import "shared/styles/_mixins.scss";
 
 
-.title {
-  
-  font-weight: 800;
-  @include breakpoint(xs) {
-    font-size: 2.5rem;
-  }
-  @include breakpoint(sm) {
-    font-size: 3rem;
-  }
-}
-
-.main_text {
-  font-family: "Open Sans", sans-serif;
-  @include breakpoint(xs) {
-    font-size: 1rem;
-    margin-top: 20px;
-    padding: 10px;
-  }
-  @include breakpoint(sm) {
-    font-size: 1.5rem;
-  }
-}
-
-
 .image_1 {
   @include breakpoint(xs) {
    width: 100%;
