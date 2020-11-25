@@ -20,14 +20,15 @@ interface IProps {
     variant: string;
     color?: string;
     children: any;
+    customClass?: string;
 }
 
-const Typography = ({variant, color, children, ...props}: IProps): any => {
+const Typography = ({variant, color, children, customClass, ...props}: IProps): any => {
     // If the variant exists in variantsMapping, we use it.
     // Otherwise, use p tag instead.
     const Component = variant ? VARIANTS[variant] : 'p';
     const handleStyles = () => {
-        return styles[`typography--variant-${variant}`];
+        return `${customClass} ${styles[`typography--variant-${variant}`]}`;
     };
     return (
         <Component className={handleStyles()} {...props}>

@@ -89,8 +89,13 @@ const HeroSection = ({quote, author, title}: HeroSectionProps) => {
     );
 };
 
+const Footer = ({children}: any) => {
+    return <div className="bg-dark p-5 w-100">{children}</div>;
+};
+
 FeatureTemplate.Hero = HeroSection;
 FeatureTemplate.StickyBarSections = StickyBarSections;
 FeatureTemplate.Content = FeatureSectionContent;
+FeatureTemplate.Footer = Footer;
 
 export default FeatureTemplate;
