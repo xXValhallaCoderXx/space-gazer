@@ -1,42 +1,23 @@
 import React from 'react';
-import {Card, CardBody, Container, Row, Col} from 'reactstrap';
-import {Link} from 'react-scroll';
-import Bounce from 'react-reveal/Bounce';
-import Flash from 'react-reveal/Flash';
-import {LayoutMain, Hero} from 'shared/components';
+import {Container, Row, Col} from 'reactstrap';
+
 const styles = require('./styles.module.scss');
 
-const internetGlobe = require('shared/images/icons/internet-globe.png');
+import FeatureTemplate from 'shared/templates/feature-layout';
+
 const missionIcon = require('shared/images/icons/mission-icon.png');
 const visionIcon = require('shared/images/icons/vison-icon.png');
 const magnifyIcon = require('shared/images/icons/magnify-glass.png');
 
 const HomePage = () => {
     return (
-        <LayoutMain nav>
-            <div className={styles.top_container_wrapper}>
-                <div className={styles.title_wrapper}>
-                    <Bounce>
-                        <h1 className={`text-light ${styles.title}`}>
-                            Not enough people in this world, I think, carry a cosmic perspective with them. It could be
-                            life-changing.
-                        </h1>
-                        <h4 className="text-light text-center">-Neil deGrasse Tyson</h4>
-                    </Bounce>
-                    <Link activeClass="active" to="section1" spy={true} smooth={true} offset={0} duration={800}>
-                        <div className={styles.scroll_downs}>
-                            <div className={styles.mousey}>
-                                <div className={styles.scroller} />
-                            </div>
-                        </div>
-                    </Link>
-
-                    <Flash duration={3500} forever>
-                        <p className={styles.explore_text}>EXPLORE</p>
-                    </Flash>
-                </div>
-            </div>
-            <div className={styles.bottom_container_wrapper} id="section1">
+        <FeatureTemplate>
+            <FeatureTemplate.Hero
+                title="Not enough people in this world, I think, carry a cosmic perspective with them. It could be life-changing."
+                author="Neil deGrasse Tyson"
+                quote=""
+            />
+            <FeatureTemplate.Content>
                 <Container>
                     <Row>
                         <Col sm="12" md="6">
@@ -101,14 +82,14 @@ const HomePage = () => {
                         </Col>
                     </Row>
                 </Container>
-                <div className="bg-dark p-5">
+                <div className="bg-dark p-5 w-100">
                     <h2 className={`${styles.footer_text} text-light`}>Excited, and curious?</h2>
                     <h2 className={`${styles.footer_text} text-light mb-n1`}>
                         You can only do one thing, uncover the mysteries of the cosmos!
                     </h2>
                 </div>
-            </div>
-        </LayoutMain>
+            </FeatureTemplate.Content>
+        </FeatureTemplate>
     );
 };
 

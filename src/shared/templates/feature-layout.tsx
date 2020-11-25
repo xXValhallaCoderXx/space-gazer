@@ -14,8 +14,8 @@ const FeatureTemplate = ({children}: any) => {
 
 const FeatureSectionContent = ({children}: any) => {
     return (
-        <Container>
-            <Row>{children}</Row>
+        <Container fluid className="p-0">
+            {children}
         </Container>
     );
 };
