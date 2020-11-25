@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "shared/styles/_mixins.scss";
+
+
+.image_1 {
+  @include breakpoint(xs) {
+   width: 100%;
+  }
+  @include breakpoint(sm) {
+    height: 300px;
+  }
+}

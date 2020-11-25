@@ -17,7 +17,6 @@
 .bottom_container_wrapper {
   height: 100%;
   background-color: white;
-  padding-bottom: 40px;
   margin-top: -1px;
 
 }
@@ -61,7 +60,7 @@
   @include breakpoint(sm) {
     border-radius: 20px;
     padding-top: 30px;
-    height: 100px;
+    height: 90px;
   }
 }
 

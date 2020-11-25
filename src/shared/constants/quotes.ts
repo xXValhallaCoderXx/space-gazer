@@ -8,6 +8,11 @@ export const QUOTES = {
         author: 'W. Clement Stone',
         quote: 'Aim for the moon, if you miss, you may hit a star',
     },
+    pauloCoelho: {
+        quote:
+            "We all live in our own world. But if you look up at the starry sky - you'll see that all the different worlds up there combine to form constellations, solar systems and galaxies.",
+        author: 'Paulo Coelho',
+    },
 };
 
 export const PLANET_DROPDOWN_OPTIONS = [

@@ -5,6 +5,7 @@ import {ParallaxProvider} from 'react-scroll-parallax';
 import {Route, Router, Switch} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import SolarSystemModule from 'pages/solar-system';
+import PlanetsModule from 'pages/solar-system';
 
 import {Home, About, NotFound, SplashScreen, Alone} from './pages';
 
@@ -20,6 +21,7 @@ const Routes = () => {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/alone" component={Alone} />
                     <Route path="/solar-system" component={SolarSystemModule} />
+                    <Route path="/planets" component={PlanetsModule} />
                     <Route component={NotFound} />
                 </Switch>
             </Router>

@@ -14,8 +14,8 @@ const FeatureTemplate = ({children}: any) => {
 
 const FeatureSectionContent = ({children}: any) => {
     return (
-        <Container>
-            <Row>{children}</Row>
+        <Container fluid className="pt-5 pb-5">
+            {children}
         </Container>
     );
 };
@@ -89,8 +89,13 @@ const HeroSection = ({quote, author, title}: HeroSectionProps) => {
     );
 };
 
+const Footer = ({children}: any) => {
+    return <div className="bg-dark p-5 w-100">{children}</div>;
+};
+
 FeatureTemplate.Hero = HeroSection;
 FeatureTemplate.StickyBarSections = StickyBarSections;
 FeatureTemplate.Content = FeatureSectionContent;
+FeatureTemplate.Footer = Footer;
 
 export default FeatureTemplate;
