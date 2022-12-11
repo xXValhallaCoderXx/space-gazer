@@ -78,7 +78,7 @@
     "@types/react-stickynode": "^1.4.0",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mixpanel-browser": "^2.29.1",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.11",
