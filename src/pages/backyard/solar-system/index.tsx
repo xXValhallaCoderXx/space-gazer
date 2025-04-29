@@ -17,7 +17,8 @@ const options = [
     {value: 'asteroids', label: 'Asteroids', disabled: 'yes'},
 ];
 
-import {Intro, SolarSystem} from './topics';
+import SolarSystem from './topics/introduction';
+import Intro from './topics/introduction';
 
 const HomePage = (props: RouteComponentProps<any>) => {
     const [isSticky, setIsSticky] = React.useState(false);
